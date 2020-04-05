@@ -1,2 +1,2 @@
-# Project-ScIRan
+# Project-ScIRank
 Search engine for Research papers
