@@ -1,0 +1,1728 @@
+{
+    "paper_id": "0139ea4ca580af99b602c6435368e7fdbefacb03",
+    "metadata": {
+        "title": "A Combined Evidence Approach to Prioritize Nipah Virus Inhibitors",
+        "authors": [
+            {
+                "first": "Nishi",
+                "middle": [],
+                "last": "Kumari",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Panjab University",
+                    "location": {
+                        "settlement": "Chandigarh",
+                        "country": "India"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Ayush",
+                "middle": [],
+                "last": "Upadhyay",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Delhi University",
+                    "location": {
+                        "settlement": "New Delhi",
+                        "country": "India"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Kishan",
+                "middle": [],
+                "last": "Kalia",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "D.A.V. College",
+                    "location": {
+                        "addrLine": "Sector-10",
+                        "settlement": "Chandigarh",
+                        "country": "India"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Rakesh",
+                "middle": [],
+                "last": "Kumar",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "CSIR-Institute of Microbial Technology",
+                    "location": {
+                        "region": "Chandigarh",
+                        "country": "India"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Kanika",
+                "middle": [],
+                "last": "Tuteja",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Panjab University",
+                    "location": {
+                        "settlement": "Chandigarh",
+                        "country": "India"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Rani",
+                "middle": [],
+                "last": "Paul",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Lucknow",
+                    "location": {
+                        "settlement": "Lucknow",
+                        "country": "India"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Eugenia",
+                "middle": [],
+                "last": "Covernton",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "Centre de recherches interdisciplinaires",
+                    "institution": "",
+                    "location": {
+                        "settlement": "Paris",
+                        "country": "France"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Tina",
+                "middle": [],
+                "last": "Sharma",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "CSIR-Institute of Microbial Technology",
+                    "location": {
+                        "region": "Chandigarh",
+                        "country": "India"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Vinod",
+                "middle": [],
+                "last": "Scaria",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Anshu",
+                "middle": [],
+                "last": "Bhardwaj",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "CSIR-Institute of Microbial Technology",
+                    "location": {
+                        "settlement": "Chandigarh",
+                        "country": "India"
+                    }
+                },
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "Nipah Virus (NiV) came into limelight recently due to an outbreak in Kerala, India. NiV causes severe disease and death in people with over 75% case fatality rate. It is a public health concern and has the potential to become a global pandemic. Lack of treatment has forced the containment methods to be restricted to isolation and surveillance. WHO's 'R&D Blueprint list of priority diseases' (2018) indicates that there is an urgent need for accelerated research & development for addressing NiV.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "In the quest for druglike NiV inhibitors (NVIs) a thorough literature search followed by systematic data curation was conducted. Rigorous data analysis was done with curated NVIs for prioritizing druglike compounds. For the same, more than 1800 descriptors of NVIs were computed and comparative analysis was performed with the FDA approved small molecules and antivirals. These compounds were further evaluated through PAINS filter to study their toxicity profile. Simultaneously, compounds were also prioritized based on the robustness of the assays through which they were identified.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "Our efforts lead to the creation of a well-curated structured knowledgebase of 182 NVIs with 98 small molecule inhibitors. The reported IC50/EC50 values for some of these inhibitors are in the nanomolar range -as low as 0.47 nM. In order to prioritize these inhibitors, we performed several tests and applied filters to identify drug-like non-toxic compounds. Of 98, a few compounds passed DruLito & PAINS filters exhibiting drug-like properties and were also prioritized in an independent screen based only the assay robustness. The NVIs have diverse structural features and offer a wide spectrum of ways in which they can be developed further as druglike molecules.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "We report a knowledgebase for furthering the development of NVIs. The platform has a diverse set of 98 NVIs of which a few have been prioritized based on a combined evidence strategy. The platform has the provision to submit new inhibitors as and when reported by the community for further enhancement of NiV inhibitor landscape.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "Nipah is an infectious negative-sense single-stranded RNA virus which belongs to the genus henipavirus and family Paramyxoviridae [1] . It is a pleomorphic enveloped virus with a particle size ranging from 40 to 1,900nm [2] . While fruit bats are thought to be the natural reservoirs of the virus, they are also able to spread to humans and some other species [3] . There are two major genetic lineages of the virus which are known to infect humans i.e, NIV Malaysia (NIV M ) and NIV Bangladesh (NIV B ) [2] .",
+            "cite_spans": [
+                {
+                    "start": 130,
+                    "end": 133,
+                    "text": "[1]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 220,
+                    "end": 223,
+                    "text": "[2]",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 360,
+                    "end": 363,
+                    "text": "[3]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 504,
+                    "end": 507,
+                    "text": "[2]",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The first outbreak of Nipah virus infection erupted between September 29,1998 , and April 4, 1999, when cases of febrile encephalitis in the suburb of Ipoh, Perak, Southern Peninsular Malaysia were reported to the Malaysian Ministry of Health (MOH) [4] . It was traced back to cross-species transmission of the virus from pigs to humans [4, 5] . In 2001 another strain of the virus was reported to cause an outbreak in Meherpur, Bangladesh. Since then outbreaks have been recorded almost annually in the country and surrounding regions such as Siliguri, India [6, 7] . Most of the outbreaks have been observed to have a mortality rate ranging from 50-100% [8] . Although direct contact with the infected bat's contaminants could cause transmission of the virus, direct human-to-human transmission has also been observed in the case of healthcare professionals and relatives of infected patients [9, 10] . More recently, the virus has garnered attention due to the first-ever outbreak in southern India during May of 2018 where 19 cases of NiV were reported in Kozhikode, Kerala. In the subsequent year, 2019, another case was reported in Ernakulam district of the state [11, 12] .",
+            "cite_spans": [
+                {
+                    "start": 60,
+                    "end": 77,
+                    "text": "September 29,1998",
+                    "ref_id": null
+                },
+                {
+                    "start": 249,
+                    "end": 252,
+                    "text": "[4]",
+                    "ref_id": null
+                },
+                {
+                    "start": 337,
+                    "end": 340,
+                    "text": "[4,",
+                    "ref_id": null
+                },
+                {
+                    "start": 341,
+                    "end": 343,
+                    "text": "5]",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 560,
+                    "end": 563,
+                    "text": "[6,",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 564,
+                    "end": 566,
+                    "text": "7]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 656,
+                    "end": 659,
+                    "text": "[8]",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 895,
+                    "end": 898,
+                    "text": "[9,",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 899,
+                    "end": 902,
+                    "text": "10]",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 1170,
+                    "end": 1174,
+                    "text": "[11,",
+                    "ref_id": null
+                },
+                {
+                    "start": 1175,
+                    "end": 1178,
+                    "text": "12]",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Nipah virus causes cell-to-cell fusion in the host thus forming multinucleated cells called syncytia. This allows the virus to spread despite the absence of viral budding and greatly influences its pathogenicity [13, 14] . The  incubation  period  of  the  virus  ranges  from  5  to  14 days (https://www.cdc.gov/vhf/nipah/pdf/factsheet.pdf). Primarily the virus infects the central nervous system but the NIV B strain has been shown to have significant respiratory involvement [2] . High mutation rate, human to human transmission, survival time of up to 4 days under various environmental conditions and lack of treatment makes it a potential bioterrorism agent [15, 16] .",
+            "cite_spans": [
+                {
+                    "start": 212,
+                    "end": 216,
+                    "text": "[13,",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 217,
+                    "end": 220,
+                    "text": "14]",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 479,
+                    "end": 482,
+                    "text": "[2]",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 665,
+                    "end": 669,
+                    "text": "[15,",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 670,
+                    "end": 673,
+                    "text": "16]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 223,
+                    "end": 287,
+                    "text": "The  incubation  period  of  the  virus  ranges  from  5  to  14",
+                    "ref_id": null
+                }
+            ],
+            "section": "Introduction"
+        },
+        {
+            "text": "Currently, there is no known treatment for the disease. Broad-spectrum antiviral ribavirin has shown contradictory results with even the most optimistic ones significantly below 50% in causing reduction of the mortality rate [17, 18, 19] . Favipiravir (T-705), a purine analogue antiviral, is reported to provide protection to upto 14 days in the Syrian hamster model challenged with a lethal dose of Nipah virus [20] . More recently, experimental drug remdesivir has demonstrated complete protection to four African green monkeys who received a lethal dose of Nipah virus. Studies are planned to assess the efficacy of the treatment over time [21] . Despite being a lethal pathogen there is not a single drug under clinical trial against this virus. Due to several challenges in discovery and development of NVIs, along with lack of therapeutic intervention and the pathogenic propensity of the virus, Nipah infections are enlisted amongst WHO's list of priority diseases [22] .",
+            "cite_spans": [
+                {
+                    "start": 225,
+                    "end": 229,
+                    "text": "[17,",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 230,
+                    "end": 233,
+                    "text": "18,",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 234,
+                    "end": 237,
+                    "text": "19]",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 413,
+                    "end": 417,
+                    "text": "[20]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 644,
+                    "end": 648,
+                    "text": "[21]",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 973,
+                    "end": 977,
+                    "text": "[22]",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "As mentioned above, various groups have made efforts over the years to identify Nipah virus inhibitors using a variety of viral assays. Most of them have used syncytia formation or titre reduction assays to identify Nipah virus inhibitors. Some of the earlier studies report nipah inhibitors based on screening of large libraries within BSL-4 settings to identify compounds that inhibited the virus-induced cytopathic effect. Three sulfonamide compounds with low EC50 values are reported [23] from these screens. More recently, Bimolecular Multicellular Complementation assays have been developed which can be used to identify potential anti-nipah inhibitors by qualitatively and quantitatively investigating the formation of a syncytium [24] . Also reported recently is a humanized monoclonal antibody for cross-neutralizing NiV and HeV. Cryo-electron microscopy followed by fusion studies demonstrated that the antibody binds to a prefusion-specific quaternary epitope which is conserved in NiV F and HeV F glycoproteins. The binding prevents membrane fusion and viral entry and clearly indicates the importance of the HNV prefusion F conformation for eliciting a robust immune response [25] .",
+            "cite_spans": [
+                {
+                    "start": 488,
+                    "end": 492,
+                    "text": "[23]",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 738,
+                    "end": 742,
+                    "text": "[24]",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 1189,
+                    "end": 1193,
+                    "text": "[25]",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Despite reports of nipah virus inhibitors, no systematic evaluation of the reported compounds is performed. A few antiviral inhibitor databases and studies exist, namely, The Influenza Research Database (IRD) [26] [27] , The Virus Pathogen Database and Analysis Resource (ViPR) [28] , enamine library (https://enamine.net/hit-finding/focused-libraries/view-all/antiviral-library), etc. They contain very limited or no information with the focus on Nipah virus. The ones with focus on Nipah virus inhibitors are either scattered datasets or curated versions with limited or no evaluation of the anti-Nipah compounds as starting points for drug discovery and development of anti-Nipah inhibitor(s) [29] .",
+            "cite_spans": [
+                {
+                    "start": 209,
+                    "end": 213,
+                    "text": "[26]",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 214,
+                    "end": 218,
+                    "text": "[27]",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 278,
+                    "end": 282,
+                    "text": "[28]",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 696,
+                    "end": 700,
+                    "text": "[29]",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Towards this, we developed a combined evidence based strategy to systematically evaluate Nipah virus inhibitors. With this objective, we curated the anti-Nipah compounds using a crowdsourcing model and the data were made publicly available at -http://vinodscaria.rnabiology.org/nipah since the inception of the project (May 2018). Our two pronged strategy comprised of (i) prioritization of NVIs based on the robustness of the assays which were used to identify them and (ii) estimation of several drug likeness parameters for the NVIs. The drug likeness analysis includes diversity analysis, similarity to FDA approved compounds (as drug repurposing candidates) or reported antivirals (to identify new scaffolds), profiling based on PAINS and DruLito filters and comparison to ZINC lead like libraries. The data curated from literature along with all these analyses is made available on a web-based platform which also allows submission and assessment of new molecules reported as NVIs.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "PubMed (https://www.ncbi.nlm.nih.gov/pubmed) and Google (https://www.google.com/) were the two main sources considered for collecting the inhibitors that showed activity against Nipah virus. Research papers relevant to the study were downloaded using the query as 'Nipah' and those with the keyword in their abstract/title were shortlisted. At the time of curation this keyword listed 838 papers which were considered for data-mining. This step was followed by a scoring system wherein papers that had confirmed information regarding the inhibitors against Nipah virus in their abstracts were assigned a score of '10', those that may or may not have information regarding the same were given a score of '5', those with information on peptides used as inhibitors were assigned a score of '4' and rest with no relevant information were given a score of '0'. Papers with score values of 10, 5 and 4 were considered for further study and all of them were manually curated to create a Nipah Virus Inhibitor Knowledgebase (NVIK) sheet which is used by all the curators to organize data based on a predefined data structure shown below in Table 1 .",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 1132,
+                    "end": 1139,
+                    "text": "Table 1",
+                    "ref_id": null
+                }
+            ],
+            "section": "Data source and structure"
+        },
+        {
+            "text": "Inhibitor Name -as reported in literature Assay type ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "ID -Internal ID for Nipah Virus Inhibitor Knowledgebase Target"
+        },
+        {
+            "text": "In order to ensure data quality, a separate team of curators re-performed the curation independent of the initial team. Errors are marked in 'Red' in the curation sheet and was then marked 'Green' once the data is verified by both the teams. Data curation and quality check was done manually and the data is stored in NVIK-Open resource Sheet which served as the crowdsourcing platform. Each entry was tagged with its contributor's email Id.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Data quality check"
+        },
+        {
+            "text": "The Nipah Virus Inhibitor Knowledgebase (NVIK) is developed using the open source LAMP (Linux-Apache-Mysql-PHP) server technology. We have also used PHP, HTML, JavaScript, AJAX and CSS. The web-interface has provision for text, structure and complex query based search and other options for browsing.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Platform architecture"
+        },
+        {
+            "text": "In the NVIK web interface, three search options are available, namely, 'Simple Search', 'Query Builder' and 'Structure Search'. The Simple Search option is to retrieve information using a text-based query on all/selected fields of the database. User can selectively display the searched records. Overall, the database contains -unique fields as shown in Figure 1 . An extensive 'Structure Search' interface is also available in NVIK. The user can query using SMILES, SDF and MOL formats. In addition, the users can also draw a compound in JSME browser that may be searched in NVIK.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 354,
+                    "end": 362,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Search tools"
+        },
+        {
+            "text": "Data on NVIs can be browsed for physicochemical properties like molecular weight, XLogP, polar surface area (PSA), hydrogen bond donor (HBD), hydrogen bond acceptor (HBA) and the number of rotatable bonds (http://bioinfo.imtech.res.in/anshu/nipah/physico_chem.php). The database can also be browsed from major fields as shown in Figure 1 . ",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 329,
+                    "end": 337,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Browsing interface"
+        },
+        {
+            "text": "We have customized a CIRCOS [31] (http://circos.ca/) in one of our earlier studies on phytomolecules in mycobacteria [32] . We utilized a similar approach to represent the relationship among physicochemical properties of NVIs. In customized CIRCOS, 98 inhibitors are defined with a band having a width of 1000. This baseline is used to represent cyclic and aliphatic compounds. Appropriate modifications were then applied to generate further histogram files. To view the the compounds clusters, a compound network diagram (CND) was made using Cytoscape (http://www.cytoscape.org/).",
+            "cite_spans": [
+                {
+                    "start": 28,
+                    "end": 32,
+                    "text": "[31]",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 117,
+                    "end": 121,
+                    "text": "[32]",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Visualization tools"
+        },
+        {
+            "text": "At present, NVIK has 182 entries. The focus of the study was to evaluate small molecule inhibitors which were 125 entries as the rest 57 were either peptide or did not have complete information. Of these 125 entries, 98 are unique nipah inhibitors as for a few compounds more than one assay has been curated from the literature. Of these, EC50/IC50 values could be obtained for 70 compounds and structures are available for all 98 inhibitors. The EC50/IC50 values range from 0.25 nM to 7562710 nM for 182 entries and 0.47 nM to 7562710 nM for 125 small molecule entries. Some of these compounds are available in DrugBank and are predicted to have anti-nipah properties. The NVIK compounds are also mapped to Pubchem/Chemspider IDs wherever possible.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "NVIK statistics"
+        },
+        {
+            "text": "The overall distribution of important physicochemical properties of NVIs is depicted in Figure 2 . It can be observed that most compounds in NVIK are cyclic in nature. Clustering of 98 NVIs resulted in 90 clusters of which 84 clusters (93.3% of NVIs) were singletons while remaining 14 clusters (15.5% of NVIs) were non-singletons. This illustrates that the NVIK library is chemically diverse. These clusters are represented as compound network diagrams made using Cytoscape. (http://bioinfo.imtech.res.in/anshu/nipah/circos.php) and the clusters are also reported in CIRCOS. The innermost graph in Figure 2 represents the near neighbours among NVIs. An intriguing observation is that compounds with different molecular weight range are near neighbours. For example, GS-441524 (531.202 g/mol) is a near neighbour of GS-441524 (\"NUC\") (291.267 g/mol). There may be common structural features in these compounds that are responsible for their activity against NiV (as highlighted). Therefore, this approach is useful in identifying potential pharmacophore features that are important in contributing to the antiviral properties of these compounds.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 88,
+                    "end": 96,
+                    "text": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 599,
+                    "end": 607,
+                    "text": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Physicochemical properties and diversity in NVIKs"
+        },
+        {
+            "text": "Comparison of NVIs is done with FDA approved compounds (2346) and antivirals obtained from Enamine library (4644). Enamine is a library of nucleoside like compounds (https://enamine.net/hitfinding/focused-libraries/view-all/antiviral-library). On the basis of physicochemical properties as suggested by Lipinski and Veber [33] it is observed that for the majority of NVIs, the distribution of all the six properties is similar to FDA approved drugs and also in some cases with Enamine compounds (Figure 3 ). Drugs with good oral availability, demonstrate TopoPSA \u2264 140 \u00c52 and number of rotatable bonds \u2264 10. ",
+            "cite_spans": [
+                {
+                    "start": 322,
+                    "end": 326,
+                    "text": "[33]",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 495,
+                    "end": 504,
+                    "text": "(Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ],
+            "section": "Physicochemical property distribution of NVIs, FDA approved compounds and Antivirals"
+        },
+        {
+            "text": "In total, there are 34 NVIs similar to 76 FDA approved drugsf. For e.g, 5'-deoxy-5'-methylthioadenosine (NVIC0097) has shown structural similarity against four FDA molecules, namely, Adenosine (a neurotransmitter), Vidarabine (active antiviral against herpes, vaccinia & varicella zoster virus), Fludarabine (a chemotherapy drug) and Ademetionine (used in the treatment of chronic liver diseases). In addition, side effects and predicted rat toxicity as reported in DrugBank is also listed for FDA approved compounds similar to NVIs (http://bioinfo.imtech.res.in/anshu/nipah/fda_app.php). This can aid in prioritization of NVIs with a potential safe profile as opposed to the ones which have reported side effects.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Structural similarity of NVIs with existing drugs"
+        },
+        {
+            "text": ". CC-BY-NC 4.0 International license author/funder. It is made available under a The copyright holder for this preprint (which was not peer-reviewed) is the . https://doi.org/10.1101/2020.03.12.977918 doi: bioRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Structural similarity of NVIs with existing drugs"
+        },
+        {
+            "text": "In order to prioritize druglike NVIs, DruLito is used which screens all compounds based on eight filters, namely, Lipinski's rule, MDDR-like rule, Veber rule, Ghose filter, BBB rule, CMC-50 like rule, weighted and unweighted Quantitative Estimate of Drug-likeness [34] [35] [36] . As can be seen from Figure 4 only two of 91 compounds passed all filters other than CMC filter. ",
+            "cite_spans": [
+                {
+                    "start": 264,
+                    "end": 268,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 274,
+                    "end": 278,
+                    "text": "[36]",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 301,
+                    "end": 309,
+                    "text": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ],
+            "section": "Drug-likeness of NVIs"
+        },
+        {
+            "text": "In order to prioritize NVIs for further studies, we performed an independent evaluation of the compounds based on the robustness of the assays that were used to identify them. Based on this analysis, we prioritised 11 NVIs. Further analysis of these NVIs also indicated that they have physicochemical descriptor values which are closer to existing drug like FDA approved compounds. Our analysis of FDA approved compounds for several physicochemical parameters namely molecular weight, number of hydrogen bond donors, number of hydrogen bond acceptors, number of rotatable bonds, XlogP and topological polar surface area revealed that most prioritized NVIs have drug like features. As can be seen from Table 2 exhibits better activity among the three and has considerable overlap with the physicochemical properties of FDA approved drugs. The scope of the current study was to perform a systematic evaluation of physicochemical properties of NVIs with respect to FDA approved drugs and antiviral libraries, understand the diversity of chemical scaffolds and correlate these computed properties with the experimentally reported bioactivity datasets for proposing a list of prioritized candidates. In order to simplify data access and further enhancement of data libraries, a web-based platform is designed for reporting new compounds, further analysis and prioritization of potential NVIs.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 701,
+                    "end": 708,
+                    "text": "Table 2",
+                    "ref_id": "TABREF3"
+                }
+            ],
+            "section": "Combined evidence approach for prioritizing NVIs"
+        },
+        {
+            "text": "NVIK is freely accessible at: http://bioinfo.imtech.res.in/anshu/nipah/ . To access all the features of NVIK to its optimum level, JavaScript and Java Runtime Environment (JRE) plugin must be enabled. ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Availability and requirements"
+        },
+        {
+            "text": "NK, KT compiled data from the literature. NK, KT, PRP an AU curated the data and updated the field wherever data was incomplete. NK and PRP curated chemical structures. KT, KK and RK developed the database, web-based tools and the interface of NVIK with inputs from NK and AB. NK performed compound analysis. TS and NK plot visualization plots, CIRCOS and CND. EC performed assay robustness analysis and ranking, NK, KT, PRP, AU and AB drafted the manuscript. VS and AB conceived and designed the project and refined the manuscript. VS and AB defined the SOP for data collection and also the data structure. The manuscript has been read and approved by all authors.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Author's Contribution"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Molecular biology of Hendra and Nipah viruses",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Harcourt",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Microbes Infect",
+            "volume": "3",
+            "issn": "",
+            "pages": "279--287",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Nipah virus infection",
+            "authors": [
+                {
+                    "first": "Bsp",
+                    "middle": [],
+                    "last": "Ang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Tcc",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "J Clin Microbiol",
+            "volume": "56",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JCM.01875-17"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Pteropid bats are confirmed as the reservoir hosts of henipaviruses: A comprehensive experimental study of virus transmission",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Halpin",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Hyatt",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Fogarty",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Am J Trop Med Hyg",
+            "volume": "85",
+            "issn": "",
+            "pages": "946--951",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Case Control Study of Risk Factors for Human Infection with a New Zoonotic Paramyxovirus, Nipah Virus, during a 1998-1999 Outbreak of Severe Encephalitis in Malaysia",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Parashar",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Sunn",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ong",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J Infect Dis",
+            "volume": "181",
+            "issn": "",
+            "pages": "1755--1759",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "Nipah virus encephalitis reemergence",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Hsu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Hossain",
+                    "suffix": ""
+                },
+                {
+                    "first": "U",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Parashar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Bangladesh. Emerg Infect Dis",
+            "volume": "10",
+            "issn": "",
+            "pages": "2082--2087",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Nipah Virus Distribution Map | Nipah Virus (NiV) | CDC",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "World Health Organization, Nipah virus outbreaks in the WHO South-East Asia Region",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Nipah virus-associated encephalitis outbreak",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Chadha",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Comer",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lowe",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Emerg Infect Dis",
+            "volume": "12",
+            "issn": "",
+            "pages": "235--240",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Transmission of Human Infection with Nipah Virus",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Luby",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Gurley",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Hossain",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Clin Infect Dis",
+            "volume": "49",
+            "issn": "",
+            "pages": "1743--1748",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "23-year-old student infected with Nipah virus, confirms Kerala govt -The Hindu",
+            "authors": [],
+            "year": 2019,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Organ-and endotheliotropism of Nipah virus infections in vivo and in vitro",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Maisner",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Neufeld",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Weingartl",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Thromb. Haemost",
+            "volume": "102",
+            "issn": "",
+            "pages": "1014--1023",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "Role of endocytosis and cathepsin-mediated activation in Nipah virus entry",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Diederich",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Maisner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Virology",
+            "volume": "375",
+            "issn": "",
+            "pages": "391--400",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "Nipah Virus Edits Its P Gene at High Frequency To Express the V and W Proteins",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kulkarni",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Volchkova",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Basler",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Palese",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Volchkov",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Shaw",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J Virol",
+            "volume": "83",
+            "issn": "",
+            "pages": "3982--3987",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Nipah virus--a potential agent of bioterrorism?",
+            "authors": [
+                {
+                    "first": "S-K",
+                    "middle": [],
+                    "last": "Lam",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Antiviral Res",
+            "volume": "57",
+            "issn": "",
+            "pages": "113--122",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Ribavirin Therapy for Nipah Virus Infection",
+            "authors": [
+                {
+                    "first": "Njc",
+                    "middle": [],
+                    "last": "Snell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Virol",
+            "volume": "78",
+            "issn": "",
+            "pages": "10211--10211",
+            "other_ids": {}
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Treatment of acute Nipah encephalitis with ribavirin",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Chong",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kamarulzaman",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Tan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Ann Neurol",
+            "volume": "49",
+            "issn": "",
+            "pages": "810--813",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Poly(I)-poly(C12U) but not ribavirin prevents death in a hamster model of Nipah virus infection",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Georges-Courbot",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Contamin",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Faure",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Antimicrob Agents Chemother",
+            "volume": "50",
+            "issn": "",
+            "pages": "1768--1772",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Favipiravir (T-705) protects against Nipah virus infection in the hamster model",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Dawes",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Kalveram",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ikegami",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Sci Rep",
+            "volume": "8",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/s41598-018-25780-3"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "GS-5734) protects African green monkeys from Nipah virus challenge",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Lo",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Feldmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Gary",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Sci Transl Med",
+            "volume": "11",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/scitranslmed.aau9242"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "Prioritizing diseases for research and development in emergency contexts",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "A BSL-4 high-throughput screen identifies sulfonamide inhibitors of Nipah virus",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Tigabu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Rasmussen",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "White",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Assay Drug Dev Technol",
+            "volume": "12",
+            "issn": "",
+            "pages": "155--161",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "A bimolecular multicellular complementation system for the detection of syncytium formation: A new methodology for the identification of Nipah virus entry inhibitors",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Garc\u00eda-Murria",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Exp\u00f3sito-Dom\u00ednguez",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Duart",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Mingarro",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Martinez-Gil",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Viruses",
+            "volume": "11",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.3390/v11030229"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "ref_id": "b24",
+            "title": "An antibody against the F glycoprotein inhibits Nipah and Hendra virus infections",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [
+                        "V"
+                    ],
+                    "last": "Dang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y-P",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y-J",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Nat Struct Mol Biol",
+            "volume": "26",
+            "issn": "",
+            "pages": "980--987",
+            "other_ids": {}
+        },
+        "BIBREF25": {
+            "ref_id": "b25",
+            "title": "Influenza Research Database: An integrated bioinformatics resource for influenza virus research",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Aevermann",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Anderson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Nucleic Acids Res",
+            "volume": "45",
+            "issn": "",
+            "pages": "466--474",
+            "other_ids": {}
+        },
+        "BIBREF26": {
+            "ref_id": "b26",
+            "title": "Approved antiviral drugs over the past 50 years",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "De Clercq",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Clin. Microbiol. Rev",
+            "volume": "29",
+            "issn": "",
+            "pages": "695--747",
+            "other_ids": {}
+        },
+        "BIBREF27": {
+            "ref_id": "b27",
+            "title": "Virus pathogen Database and Analysis Resource (ViPR): A comprehensive bioinformatics Database and Analysis Resource for the Coronavirus research community",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Pickett",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Greer",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Viruses",
+            "volume": "4",
+            "issn": "",
+            "pages": "3209--3226",
+            "other_ids": {}
+        },
+        "BIBREF28": {
+            "ref_id": "b28",
+            "title": "Computational identification of inhibitors using QSAR approach against Nipah virus",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rajput",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Front Pharmacol",
+            "volume": "10",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.3389/fphar.2019.00071"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "ref_id": "b29",
+            "title": "PaDEL-descriptor: An open source software to calculate molecular descriptors and fingerprints",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Yap",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Comput Chem",
+            "volume": "32",
+            "issn": "",
+            "pages": "1466--1474",
+            "other_ids": {}
+        },
+        "BIBREF30": {
+            "ref_id": "b30",
+            "title": "Circos: An information aesthetic for comparative genomics",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Krzywinski",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Schein",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Birol",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Genome Res",
+            "volume": "19",
+            "issn": "",
+            "pages": "1639--1645",
+            "other_ids": {}
+        },
+        "BIBREF31": {
+            "ref_id": "b31",
+            "title": "BioPhytMol: a drug discovery community resource on anti-mycobacterial phytomolecules and plant extracts",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Sharma",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Dutta",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Sharma",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J Cheminform",
+            "volume": "6",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF32": {
+            "ref_id": "b32",
+            "title": "Molecular Properties That Influence the Oral Bioavailability of Drug Candidates",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Veber",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Johnson",
+                    "suffix": ""
+                },
+                {
+                    "first": "H-Y",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Ward",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Kopple",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J Med Chem",
+            "volume": "45",
+            "issn": "",
+            "pages": "2615--2623",
+            "other_ids": {}
+        },
+        "BIBREF33": {
+            "ref_id": "b33",
+            "title": "Property distribution of drug-related chemical databases",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [
+                        "I"
+                    ],
+                    "last": "Oprea",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J Comput Aided Mol Des",
+            "volume": "14",
+            "issn": "",
+            "pages": "251--64",
+            "other_ids": {}
+        },
+        "BIBREF34": {
+            "ref_id": "b34",
+            "title": "Quantifying the chemical beauty of drugs",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Bickerton",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "V"
+                    ],
+                    "last": "Paolini",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Besnard",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Muresan",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Hopkins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nat Chem",
+            "volume": "4",
+            "issn": "",
+            "pages": "90--98",
+            "other_ids": {}
+        },
+        "BIBREF35": {
+            "ref_id": "b35",
+            "title": "A Knowledge-Based Approach in Designing Combinatorial or Medicinal Chemistry Libraries for Drug Discovery. 1. A Qualitative and Quantitative Characterization of Known Drug Databases",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Ghose",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [
+                        "N"
+                    ],
+                    "last": "Viswanadhan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Wendoloski",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J Comb Chem",
+            "volume": "1",
+            "issn": "",
+            "pages": "55--68",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "NVIK architecture illustrating various fields with 'Search' options, 'Browse by' options and structural 'similarity' options.NVIK's query builder option enables search using complex queries with the help of logical operators such as AND & OR. With these options, the user can retrieve targeted results such as compounds tested in specific cell lines with different IC50 values.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "CIRCOS Plot illustrating the overall distribution of chemical and physicochemical properties of 98 NVIK small molecules. The diagram consists of 8 rings with the outermost ring categorizing the compounds as aliphatic or cyclic depending on their chemical nature. The subsequent rings illustrate the six graphs of calculated physicochemical properties. All compounds in the diagram are arranged in the increasing order of their molecular weight. The innermost ring represents the near neighbour network of NVIK compounds. Example of GS-441524 and GS-441524 (\"NUC\") is shown. While the two compounds are structurally similar, the latter displays a better antiviral activity. It may be suspected that the slightest differences in the structure are responsible for this effect thus enabling derivation of pharmacophore features.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Physicochemical distribution of NVIs with respect to FDA approved and enamine compounds based on six properties. These properties were studied using the PaDel software. It can be observed that most NVIs have properties which overlap with FDA approved drugs or antiviral compounds.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Drug-likeness study of NVIK compounds. (A) Compound distribution graph of 91 NVIs that can be filtered by DruLiTo (Drug-likeness Tool) filter with 2 compounds passing seven filters. More than half of the compounds pass at least four DruLito filters. (B) Structure of NVIK compounds crossing seven filters of DruLiTo: NVIC0009-N-(Cyclopropylmethyl)-1-ethyl-6-fluoro-4-oxo-1,4-N-(4-Chlorobenzyl)-1-ethyl-4-oxo-7-(trifluoromethyl)-1,4-dihydroquinoline-3-carboxamide and NVIC0040 -848-0115",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Abbreviations FDA: Food and Drug Administration, NVIs: Nipah Virus Inhibitors, Niv: Nipah Virus, WHO: World Health Organization, R&D: Research and Development, PAINS: Pan-assay interference compounds, IC50: Half maximal inhibitory concentration, EC50: half-maximal effective concentration, NVIK: Nipah Virus Inhibitor Knowledgebase, NVIC: Nipah Virus Inhibitor Collection, LAMP: Linux-Apache-Mysql-PHP, SMILES: SDF: structure data file, Nneib: Near Neighbour, TopoPSA: topological polar surface area, NADH: Nicotinamide adenine dinucleotide.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "For the structure of the inhibitors, MarvinSketch 5.11.4 software from ChemAxon (https://chemaxon.com/) was used and the corresponding ChemSpider (http://www.chemspider.com/) and PubChem (https://pubchem.ncbi.nlm.nih.gov/) Ids were fetched. These structures were either taken directly from the original paper or the references mentioned in it. Else they were retrieved directly from the company which sourced the compounds initially in the original paper. Repurposed drugs were given DrugBank Id. All inhibitors were given a unique Id. EC50/ IC50 values are mentioned in nM & uM units.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "DruLiTo_index.html) and PAINS filters were applied. Clustering is also performed with FDA approved compounds and the results are reported with known side-effects and predicted rat acute http://bioinfo.imtech.res.in/anshu/nipah/fda_app.php).",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": ", NVIC0025, NVIC0032 and NVIC0048 passed 6 DruLito filters and were accepted in FAF drugs analysis. Of the three compounds shortlisted NVIC0048 displayed a high degree of overlap with all six physicochemical parameter ranges. However NVIC0032 (9167 (2,2,2-trifluoro-N-[3-(Nnaphthylcarbamoyl)(4,5,6,7-tetrahydrobenzo[\u03b2]thiophen-2-yl)]acetamide)",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF3": {
+            "text": "List of prioritized NVIs along with their biological activity, drug likeness profile and structural similarity to antivirals / FDA approved small molecular libraries. Most compounds were found to be dissimilar to FDA approved small molecule with the exception of bortezomib (NVIC0027) and chloroquine (NVIC0048). *minimum value has been reported **minimum effective concentration . None of these compounds show similarity to the Enamine antiviral library. #http://bioinfo.imtech.res.in/anshu/nipah/chembl_sim.php ##http://bioinfo.imtech.res.in/anshu/nipah/zinc_sim.php",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": [
+        {
+            "text": "TS acknowledges fellowship from DST INSPIRE and RK acknowledges fellowship from CSIR.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgements"
+        }
+    ]
+}

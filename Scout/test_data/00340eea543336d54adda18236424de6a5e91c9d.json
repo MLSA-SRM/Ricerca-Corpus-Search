@@ -1,0 +1,1370 @@
+{
+    "paper_id": "00340eea543336d54adda18236424de6a5e91c9d",
+    "metadata": {
+        "title": "Analysis Title: Regaining perspective on SARS-CoV-2 molecular tracing and its implications",
+        "authors": [
+            {
+                "first": "Carla",
+                "middle": [],
+                "last": "Mavian",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Florida",
+                    "location": {
+                        "settlement": "Gainesville",
+                        "region": "FL",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Simone",
+                "middle": [],
+                "last": "Marini",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Florida",
+                    "location": {
+                        "settlement": "Gainesville",
+                        "region": "FL",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Costanza",
+                "middle": [],
+                "last": "Manes",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Florida",
+                    "location": {
+                        "settlement": "Gainesville",
+                        "region": "FL",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Ilaria",
+                "middle": [],
+                "last": "Capua",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Florida",
+                    "location": {
+                        "settlement": "Gainesville",
+                        "region": "FL",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Mattia",
+                "middle": [],
+                "last": "Prosperi",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Florida",
+                    "location": {
+                        "settlement": "Gainesville",
+                        "region": "FL",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Marco",
+                "middle": [],
+                "last": "Salemi",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Florida",
+                    "location": {
+                        "settlement": "Gainesville",
+                        "region": "FL",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "During the past three months, a new coronavirus (SARS-CoV-2) epidemic has been growing exponentially, affecting over 100 thousand people worldwide, and causing enormous distress to economies and societies of affected countries. A plethora of analyses based on viral sequences has already been published, in scientific journals as well as through non-peer reviewed channels, to investigate SARS-CoV-2 genetic heterogeneity and spatiotemporal dissemination. We examined all full genome sequences currently available to assess the presence of sufficient information for reliable phylogenetic and phylogeographic studies. Our analysis clearly shows severe limitations in the present data, in light of which any finding should be considered, at the very best, preliminary and hypothesis-generating. Hence the need for avoiding stigmatization based on partial information, and for continuing concerted efforts to increase number and quality of the sequences required for robust tracing of the epidemic.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "In December 2019, a novel coronavirus, SARS-CoV-2, was identified in Wuhan, China, as the etiologic agent of coronavirus disease 2019 , which by March 2020 has already spread across more than 80 countries 1 . Common symptoms of infection include fever, cough, and shortness of breath, while severe cases are characterized by advanced respiratory distress and pneumonia, often resulting in death 2 . Soon after the first epidemiological data together with SARS-CoV-2 genetic sequences were made available, a glut of phylogeny-based analyses began to circulate discussing, in scientific papers as well as (social) media, countries that might have been fueling the spread. The implications of misunderstanding the real dynamic of the COVID-19 pandemic are extremely dangerous. Ethnic or social discrimination resulting from unsupported assumptions on viral contagion -often amplified by irresponsible, uncontrollable communications -can be highly damaging for people and countries.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": ""
+        },
+        {
+            "text": "Despite (social) media are often vehicle for fake news and boast news hype, it is also worth noting the tremendous effort of the scientific community to provide free, up-to-date information on ongoing studies, as well as critical evaluations. In particular, the US-based NextStrain 3 team has been posting real-time updates on the epidemic tracing by molecular analyses. Several discussions and evidence-based debates on controversial hypotheses on the epidemic have ensued -such as the number of untraced infections in the US, the putative virus introduction in Italy through Germany, and the alleged lineage diversification in China 4 later criticized 5 -aided by a concerted and productive effort of internationally-renowned research groups in Edinburgh, Glasgow, and Oxford, UK, among others. Recently, an editorial published on Science 6 has also highlighted how unsupported or misleading claims circulating in forums, social media, and even peer-reviewed articles, have been led by a substantial over interpretation of the available data.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": ""
+        },
+        {
+            "text": "Hence, the urgency to reframe the current debate in more rigorous scientific terms, and quantitatively evaluate whether sufficient information for reliable phylogenetic and phylogeographic studies currently exists, or which gaps need to be addressed.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": ""
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Inhomogeneous sampling and phylogeographic uncertainly"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 16.20034470 doi: medRxiv preprint Before carrying out any phylogeny-based analysis of virus evolution and spatiotemporal spread, it is crucial to test the quality of sequence data, since uneven sampling, presence of phylogenetic noise, and absence of temporal signal can affect reliability of the results (e.g. ancestral state reconstructions, molecular clock calibrations) 7 . We downloaded all SARS-CoV-2 full genome sequences deposited on GISAID (https://www.gisaid.org/) 8 to compare the number of high quality genomes sampled per country with the number of confirmed cases at the time of sampling, as well as the country's total population ( Figure 1 ). As March 10 th 2020, 331 genome sequences from 29 countries were available, almost twice as much than just one week earlier (March 3 rd 2020, 169 genome sequences from 22 countries). Yet, the sampling per country was inhomogeneous, with confirmed cases clearly uncorrelated to the number of genomes (Spearman correlation = 0.03). Moreover, correlation could only be investigated with confirmed cases (as proxy), since not all affected countries have made publicly available the total number of coronavirus testing performed. Even within the same country, sequenced genomes were usually sampled from few hotspots, not necessarily representative of the whole epidemic in that country.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "16.20034470 doi: medRxiv preprint",
+                    "ref_id": null
+                },
+                {
+                    "start": 485,
+                    "end": 486,
+                    "text": "7",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 758,
+                    "end": 766,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Inhomogeneous sampling and phylogeographic uncertainly"
+        },
+        {
+            "text": "Italy, for example, the second country per confirmed cases, has uploaded so far only two genomes from Lombardy and three from Lazio (Table S1) , i.e. only two of the twenty Italian regions, all with confirmed cases 9 . China and USA contributed with 123 and 63 genomes respectively (56% combined), while 13 countries contribute with only one or two samples (6.3% combined). Notably, three countries with less than 400 confirmed cases have provided a substantial number of genomes (Netherlands 28, Australia 18, Singapore 11; 17% combined) ( Figure 1 ).",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 132,
+                    "end": 142,
+                    "text": "(Table S1)",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 541,
+                    "end": 549,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Inhomogeneous sampling and phylogeographic uncertainly"
+        },
+        {
+            "text": "The effect of inhomogeneous sampling and missing data on phylogeography reconstructions, like the ones recently rushed through news and (social) media to claim specific dissemination routes of SARS-CoV-2 among countries, can be quite dramatic. An instructive example is the putative introduction of SARS-CoV-2 in Italy from Germany. The maximum likelihood (ML) tree, inferred from the full genome viral sequences available on March 3 rd , 2020 (Supplementary Figure S1 ), showed a well-supported cluster of European and Asian sequences (reported in Figure 2a ), which contained a subclade (subclade A, Figure 2a ) including a sequence isolated in Germany that . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 459,
+                    "end": 468,
+                    "text": "Figure S1",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 549,
+                    "end": 558,
+                    "text": "Figure 2a",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 602,
+                    "end": 611,
+                    "text": "Figure 2a",
+                    "ref_id": "FIGREF2"
+                }
+            ],
+            "section": "Inhomogeneous sampling and phylogeographic uncertainly"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 16.20034470 doi: medRxiv preprint appears to be paraphyletic (with strong bootstrap support) to an Italian sequence clustering, in turn, with sequences from Finland, Mexico, Germany and Switzerland (Figure 2a ).",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "16.20034470",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 309,
+                    "end": 319,
+                    "text": "(Figure 2a",
+                    "ref_id": "FIGREF2"
+                }
+            ],
+            "section": "Inhomogeneous sampling and phylogeographic uncertainly"
+        },
+        {
+            "text": "Based on this observation (which was available on NextStrain), a heated discussion circulated on social media about a transmission event from Germany to Italy followed by further spread from Italy the other countries. However, in a new tree inferred just one week later, when more than 135 new full genome sequences were made available on GISAID 8 ( Figure S2 ), the direct link between Germany and Italy has disappeared due to the additional clustering of previously unsampled sequences from Portugal, Brazil, Wales and Netherland ( Figure 2b ). Most importantly, there is no sufficient evidence of a higher likelihood (Shimodaira-Hasgawa test, Table 1 ) for tree topologies generated arbitrarily switching branches in the tree (see arrows in Figure 2b) compared to the ML tree inferred from the real data. In other words, it is not possible with the present data to decide which branching pattern (and, therefore, phylogeographic reconstruction)",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 350,
+                    "end": 359,
+                    "text": "Figure S2",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 534,
+                    "end": 543,
+                    "text": "Figure 2b",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 646,
+                    "end": 653,
+                    "text": "Table 1",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 744,
+                    "end": 754,
+                    "text": "Figure 2b)",
+                    "ref_id": "FIGREF2"
+                }
+            ],
+            "section": "Inhomogeneous sampling and phylogeographic uncertainly"
+        },
+        {
+            "text": "is the most likely.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Inhomogeneous sampling and phylogeographic uncertainly"
+        },
+        {
+            "text": "Lack of resolution and uncertainty in the SARS-CoV-2 phylogenetic tree is to be expected, considering that relatively little genetic diversity can be accumulated during the first three months of an epidemic, even for an exponentially spreading and fast-evolving RNA virus. Plots of pairwise transitions/transversions vs. genetic distance 10 showed, indeed, low genetic diversity among SARS-CoV-2 genomes, considerable scattering, and overlap in transitions and transversions among closely related sequences (Figure 3a ). The 331 full genomes available contained 477 out of 29,564 variable sites (1.6%), of which 377 were singleton and only 100 (0.34%) parsimony informative, indicating a substantial lack of phylogenetic information, and raising the possibility of a number of sequencing errors. Further assessment of phylogenetic signal in the dataset was carried out using likelihood mapping analysis 11 , which estimates the likelihood of each of possible tree topology for any group of four sequences (quartet), randomly . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 507,
+                    "end": 517,
+                    "text": "(Figure 3a",
+                    "ref_id": "FIGREF4"
+                }
+            ],
+            "section": "Sequencing errors and phylogenetic noise"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 16.20034470 doi: medRxiv preprint chosen from an alignment, and reports them inside an equilateral triangle (the likelihood map)",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "16.20034470",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Sequencing errors and phylogenetic noise"
+        },
+        {
+            "text": "where the corners represent distinct tree topologies and the center star-like trees. Quartets are considered \"resolved\" when the three likelihoods are significantly different (phylogenetic signal, most dots equally distributed in the corners, i.e. data are suitable for robust phylogeny inference), unresolved or partially resolved, when all three likelihood values or two of them are not significantly different (phylogenetic noise, most dots in sides or center areas, i.e. data may not be sufficient for robust phylogeny inference). Extensive simulation studies have shown that, for sequences to be considered robust in terms of phylogenetic signal, side/center areas of the likelihood mapping must include <40% of the unresolved quartets 12 , way lower than the 52.9% unresolved quartets detected in the SARS-CoV-2 full genomes alignment ( Figure 3b ). It is important to keep in mind that such a lack of phylogenetic signal makes the overall topology of any SARS-CoV-2 tree unreliable, and even clades with high bootstrap values should be interpreted with extreme caution. Finally, the mean genetic distance of each sequence from the root of a ML tree indicated that the available genomic data lack temporal signal (no significant linear correlation between accumulated genetic distance and sampling time, Figure 3c ). This is, again, expected in genomes obtained over a very short period of time (~ three months) since the beginning of the outbreak. Bayesian analysis 13 , which infers phylogenetic and phylogeographic patterns from a posterior distribution of trees, might facilitate comparisons about different evolutionary scenarios, help in retrieving the correct topology, and estimate an accurate evolutionary rate. With more genome sequences sampled from different time points and geographic areas made available, literally, every day, Bayesian analysis may soon be a viable option. However, as long the new data do not increase phylogenetic and temporal signal, Bayesian phylogenetic and phylogeography results would remain equally questionable.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 843,
+                    "end": 852,
+                    "text": "Figure 3b",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1310,
+                    "end": 1319,
+                    "text": "Figure 3c",
+                    "ref_id": "FIGREF4"
+                }
+            ],
+            "section": "Sequencing errors and phylogenetic noise"
+        },
+        {
+            "text": "Taken together, our observations suggest that any conclusion drawn, at present, about existing lineages and direction of viral spread, based on phylogenetic analysis of SARS-CoV-2 sequence data, is potentially misleading. Nowadays, published scientific data and media are very easily . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conclusions and Future directions"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conclusions and Future directions"
+        },
+        {
+            "text": "accessible to a worldwide audience, thus it is important more than ever to weigh the information being shared. We believe that current molecular epidemiology data are not solid enough to provide a scientifically sound analysis of SARS-CoV-2 spread. Any inference based on phylogenetic trees should be considered at the very best preliminary, and hypothesis-generating.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conclusions and Future directions"
+        },
+        {
+            "text": "Hence the need for 1) avoiding stigmatization based on partial information and 2) continuing the concerted scientific effort to increase the number and quality of available data. The evolutionary dynamics of SARS-CoV-2 spread will unveil an unprecedented amount of information, which is essential to make policy decisions. The whole of humanity is threatened by the current pandemic, and policy makers need to adjust their mitigation measures while the pandemic itself is developing. Some of the urgent answers required lie in the timely availability of abundant, high quality sequence data not only from countries experiencing a high number of reported cases, such as Italy and South Korea, but also from others that seem to be experiencing, at least for now, a lower number of infections.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conclusions and Future directions"
+        },
+        {
+            "text": "GISAID was accessed on March 3 rd and 10 th , 2020 (final dataset information reported in Table   S1 ). After quality control of sequences that were not full genomes or contained extensive stretches of unknown nucleotides, the first dataset (March 3 rd 2020) consisted of 169 genomes from 22 countries, while the second (March 10 th , 2020) 331 from 29 countries. Confirmed cases were retrieved for the same day from interactive web-based dashboard developed by Johns Hopkins University 14 .",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 90,
+                    "end": 100,
+                    "text": "Table   S1",
+                    "ref_id": "TABREF1"
+                }
+            ],
+            "section": "Data"
+        },
+        {
+            "text": "Transition/transversions vs. genetic distance plot were calculated using DAMBE6 10 . Evaluation of the presence of phylogenetic signal satisfying resolved phylogenetic relationships among sequences was carried out with IQ-TREE, allowing the software to search for all possible quartets . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 80,
+                    "end": 82,
+                    "text": "10",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Phylogenetic signal and ML phylogeny inference"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 16.20034470 doi: medRxiv preprint using the best-fitting nucleotide substitution model 11 . ML tree reconstruction was performed in IQ-TREE based on the best-fit model chosen according to Bayesian Information Criterion (BIC) 15, 16 . Topology was tested performing the Shimodaira-Hasegawa 17 on \"Subclade A\" by comparing the inferred tree to three trees where two branches: (Tree 1) Italy (EPI_ISL_412973) switched with Wales (EPI_ISL_413555), (Tree 2) Germany (EPI_ISL_406862 with) Brazil (EPI_ISL_412964), (Tree 3) and Portugal (EPI_ISL_413648) with Brazil (EPI_ISL_412964), (Tree 4) Germany (EPI_ISL_406862) with Portugal (EPI_ISL_413648). All tests performed 10,000 resamplings using the using the RELL approximation method 18 . Position of these genomes within \"Subclade A\" is indicated in Figure 1 with an arrow.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "16.20034470",
+                    "ref_id": null
+                },
+                {
+                    "start": 336,
+                    "end": 339,
+                    "text": "15,",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 340,
+                    "end": 342,
+                    "text": "16",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 906,
+                    "end": 914,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Phylogenetic signal and ML phylogeny inference"
+        },
+        {
+            "text": "Exploration of temporal structure, i.e. presence of molecular clock in the data, was assessed by regression of divergence -root-to-tip genetic distance-against sampling time using TempEst 19 . In this case, absence of a linear trend indicates that the data does not contain temporal signal and that the data is not appropriate for phylogenetic inference using molecular clock models.",
+            "cite_spans": [
+                {
+                    "start": 188,
+                    "end": 190,
+                    "text": "19",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Phylogenetic signal and ML phylogeny inference"
+        },
+        {
+            "text": "Ancestral state reconstruction of full datasets reported in Figures S1 and S2 were based on the ML tree obtained with IQ-TREE and performed using TreeTime 20 . We choose to show the \"European subclade\" and \"Subclade A\" as cladograms in Figure 1 as there are no phylogenetic and temporal signals in the datasets: scaling phylogenies in time or nucleotide substitution in this case is misleading. . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 60,
+                    "end": 77,
+                    "text": "Figures S1 and S2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 236,
+                    "end": 244,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Phylogenetic signal and ML phylogeny inference"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 16.20034470 doi: medRxiv preprint Each bi-directional arrow, and corresponding number, connects two tip branches that were switched to generate an alternative tree topology to be tested (see Table 1 , Methods). CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "16.20034470",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 302,
+                    "end": 309,
+                    "text": "Table 1",
+                    "ref_id": "TABREF1"
+                }
+            ],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity. EPI_ISL_412971_BetaCoV_Finland_FIN-25_2020 EPI_ISL_406533_BetaCoV_Guangzhou_20SF206_2020 EPI_ISL_407896_BetaCoV_Australia_QLD02_2020 EPI_ISL_408478_BetaCoV_Chongqing_YC01_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_412979__BetaCoV_Wuhan_HBCDC-HB-03_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_411220_BetaCoV_France_IDF0386-islP3_2020 EPI_ISL_410044_BetaCoV_USA_CA6_2020 EPI_ISL_413020_BetaCoV_Switzerland_1000477377_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_406030_BetaCoV_Shenzhen_HKU-SZ-002_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_408669_BetaCoV_Japan_KY-V-029_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_408515_BetaCoV_Wuhan_IVDC-HB-envF13-21_2020 EPI_ISL_410713_BetaCoV_Singapore_7_2020 EPI_ISL_412873_BetaCoV_Korea_KCDC24_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_402120_BetaCoV_Wuhan_IVDC-HB-04_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_406970_BetaCoV_Hangzhou_HZ-1_2020 EPI_ISL_406973_BetaCoV_Singapore_1_2020 EPI_ISL_412029_BetaCoV_Hong_Kong_VM20001988_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_410720_BetaCoV_France_IDF0372-isl_2020 EPI_ISL_411951_BetaCoV_Sweden_01_2020 EPI_ISL_408488_BetaCoV_Jiangsu_IVDC-JS-001_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_402123_BetaCoV_Wuhan_IPBCAMS-WH-01_2019 EPI_ISL_407894_BetaCoV_Australia_QLD01_2020 EPI_ISL_411955_BetaCoV_USA_CA8_2020 EPI_ISL_403962_BetaCoV_Nonthaburi_61_2020 EPI_ISL_406801_BetaCov_Wuhan_WH04_2020 EPI_ISL_408978_BetaCoV_Wuhan_WH05_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_407084_BetaCoV_Japan_AI_I-004_2020 EPI_ISL_407215_BetaCoV_USA_WA1-F6_2020 EPI_ISL_411060_BetaCoV_Fujian_8_2020 EPI_ISL_410984_BetaCoV_France_IDF0515-isl_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_412980__BetaCoV_Wuhan_HBCDC-HB-04_2020 EPI_ISL_410546_BetaCoV_Italy_INMI1-cs_2020 EPI_ISL_408977_BetaCoV_Sydney_3_2020 EPI_ISL_412982__BetaCoV_Wuhan_HBCDC-HB-06_2020 EPI_ISL_407071_BetaCoV_England_01_2020 EPI_ISL_412912_BetaCoV_Germany_Baden-Wuerttemberg-1_2020 EPI_ISL_411927_BetaCoV_Taiwan_4_2020 EPI_ISL_410536_BetaCoV_Singapore_5_2020 EPI_ISL_406538_BetaCoV_Guangdong_20SF201_2020 EPI_ISL_407988_BetaCoV_Singapore_3_2020 EPI_ISL_406036_BetaCoV_USA_CA2_2020 EPI_ISL_411954_BetaCoV_USA_CA7_2020 EPI_ISL_412028_BetaCoV_Hong_Kong_VM20001061_2020 EPI_ISL_406862_BetaCoV_Germany_BavPat1_2020 EPI_ISL_406597_BetaCoV_France_IDF0373_2020 EPI_ISL_408009_BetaCoV_USA_CA4_2020 EPI_ISL_410716_BetaCoV_Singapore_10_2020 EPI_ISL_403933_BetaCoV_Guangdong_20SF013_2020 EPI_ISL_402129_BetaCoV_Wuhan_WIV06_2019",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_406594_BetaCoV_Shenzhen_SZTH-003_2020 EPI_ISL_407987_BetaCoV_Singapore_2_2020 EPI_ISL_413015_BetaCoV_Canada_ON_VIDO-01_2020 EPI_ISL_407976_BetaCoV_Belgium_GHB-03021_2020 EPI_ISL_406531_BetaCoV_Guangdong_20SF174_2020 EPI_ISL_410715_BetaCoV_Singapore_9_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_404227_BetaCoV_Zhejiang_WZ-01_2020 EPI_ISL_408479_BetaCoV_Chongqing_ZX01_2020 EPI_ISL_406535_BetaCoV_Foshan_20SF210_2020 EPI_ISL_408976_BetaCoV_Sydney_2_2020 EPI_ISL_411066_BetaCoV_Fujian_13_2020 EPI_ISL_407073_BetaCoV_England_02_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_403929_BetaCoV_Wuhan_IPBCAMS-WH-04_2019 EPI_ISL_410301_BetaCoV_Nepal_61_2020 EPI_ISL_403931_BetaCoV_Wuhan_IPBCAMS-WH-02_2019",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "EPI_ISL_410531_BetaCoV_Japan_NA-20-05-1_2020 EPI_ISL_403963_BetaCoV_Nonthaburi_74_2020 EPI_ISL_402125_BetaCoV_Wuhan-Hu-1_2019",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_408514_BetaCoV_Wuhan_IVDC-HB-envF13-20_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_402119_BetaCoV_Wuhan_IVDC-HB-01_2019 EPI_ISL_411956_BetaCoV_USA_TX1_2020 EPI_ISL_406596_BetaCoV_France_IDF0372_2020 EPI_ISL_412967_BetaCoV_China_IQTC02_2020 EPI_ISL_408431_BetaCov_France_IDF0626_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_410532_BetaCoV_Japan_OS-20-07-1_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_411957_BetaCoV_China_WH-09_2020 EPI_ISL_412970_BetaCoV_USA_WA2_2020 EPI_ISL_412978__BetaCoV_Wuhan_HBCDC-HB-02_2020 EPI_ISL_412869_BetaCoV_Korea_KCDC05_2020 EPI_ISL_412965_BetaCoV_Canada_BC_37_0-2_2020 EPI_ISL_412871_BetaCoV_Korea_KCDC07_2020 EPI_ISL_408008_BetaCoV_USA_CA3_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_406593_BetaCoV_Shenzhen_SZTH-002_2020 EPI_ISL_406536_BetaCoV_Foshan_20SF211_2020 EPI_ISL_412459_BetaCoV_Jingzhou_HBCDC-HB-01_2020 EPI_ISL_410718_BetaCoV_Australia_QLD04_2020 EPI_ISL_412862_BetaCoV_USA_CA9_2020 EPI_ISL_413019_BetaCoV_Switzerland_1000477102_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_412981__BetaCoV_Wuhan_HBCDC-HB-05_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_408668_BetaCoV_Vietnam_VR03-38142_2020 EPI_ISL_410535_BetaCoV_Singapore_4_2020 EPI_ISL_408665_BetaCoV_Japan_TY-WK-012_2020 EPI_ISL_406716_BetaCoV_China_WHU01_2020 EPI_ISL_402127_BetaCoV_Wuhan_WIV02_2019 EPI_ISL_411926_BetaCoV_Taiwan_3_2020 EPI_ISL_406223_BetaCoV_USA_AZ1_2020 EPI_ISL_407214_BetaCoV_USA_WA1-A12_2020 EPI_ISL_406717_BetaCoV_China_WHU02_2020 EPI_ISL_404228_BetaCoV_Zhejiang_WZ-02_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_412898__BetaCoV_Wuhan_HBCDC-HB-02_2019 EPI_ISL_413017_BetaCoV_South_Korea_KUMC01_2020 EPI_ISL_408480_BetaCoV_Yunnan_IVDC-YN-003_2020 EPI_ISL_403936_BetaCoV_Guangdong_20SF028_2020 EPI_ISL_408667_BetaCoV_Japan_TY-WK-521_2020 EPI_ISL_411218_BetaCoV_France_IDF0571_2020 EPI_ISL_405839_BetaCoV_Shenzhen_HKU-SZ-005_2020 EPI_ISL_408010_BetaCoV_USA_CA5_2020 EPI_ISL_406031_BetaCoV_Taiwan_2_2020 EPI_ISL_406844_BetaCoV_Australia_VIC01_2020 EPI_ISL_411950_BetaCoV_Jiangsu_JS01_2020 EPI_ISL_412974_BetaCoV_Italy_SPL1_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_403928_BetaCoV_Wuhan_IPBCAMS-WH-05_2020 EPI_ISL_412870_BetaCoV_Korea_KCDC06_2020 EPI_ISL_404253_BetaCoV_USA_IL1_2020 EPI_ISL_410045_BetaCoV_USA_IL2_2020 EPI_ISL_403932_BetaCoV_Guangdong_20SF012_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_408484_BetaCoV_Sichuan_IVDC-SC-001_2020 EPI_ISL_410537_BetaCoV_Singapore_6_2020 EPI_ISL_412872_BetaCoV_Korea_KCDC12_2020 EPI_ISL_407079_BetaCoV_Finland_1_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_410545_BetaCoV_Italy_INMI1-isl_2020 EPI_ISL_408670_BetaCoV_USA_WI1_2020 EPI_ISL_403937_BetaCoV_Guangdong_20SF040_2020 EPI_ISL_403934_BetaCoV_Guangdong_20SF014_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_413014_BetaCoV_Canada_ON-PHL2445_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_411915_BetaCoV_Taiwan_CGMH-CGU-01_2020 EPI_ISL_410717_BetaCoV_Australia_QLD03_2020 EPI_ISL_412026_BetaCoV_Hefei_2_2020 EPI_ISL_407313_BetaCoV_Hangzhou_HZCDC0001_2020 EPI_ISL_412972_BetaCoV_Mexico_CDMX_InDRE_01_2020 EPI_ISL_406034_BetaCoV_USA_CA1_2020 EPI_ISL_411952_BetaCoV_Jiangsu_JS02_2020 EPI_ISL_411902_BetaCoV_Cambodia_0012_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_413016_BetaCov_Brazil_SPBR-02_2020 EPI_ISL_413018_BetaCoV_South_Korea_KUMC02_2020 EPI_ISL_403930_BetaCoV_Wuhan_IPBCAMS-WH-03_2019",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402130_BetaCoV_Wuhan_WIV07_2019"
+        },
+        {
+            "text": "EPI_ISL_412899__BetaCoV_Wuhan_HBCDC-HB-03_2019 EPI_ISL_408489_BetaCoV_Taiwan_NTU01_2020 EPI_ISL_409067_BetaCoV_USA_MA1_2020 EPI_ISL_404895_BetaCoV_USA_WA1_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        },
+        {
+            "text": "EPI_ISL_408666_BetaCoV_Japan_TY-WK-501_2020 EPI_ISL_410218_BetaCov_Taiwan_NTU02_2020 EPI_ISL_407893_BetaCoV_Australia_NSW01_2020 EPI_ISL_407193_BetaCoV_South_Korea_KCDC03_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        },
+        {
+            "text": "EPI_ISL_412983_BetaCoV_Tianmen_HBCDC-HB-07_2020 EPI_ISL_410714_BetaCoV_Singapore_8_2020 EPI_ISL_403935_BetaCoV_Guangdong_20SF025_2020 EPI_ISL_406798_BetaCov_Wuhan_WH01_2019 EPI_ISL_411953_BetaCoV_Jiangsu_JS03_2020 EPI_ISL_412030_BetaCoV_Hong_Kong_VB20026565_2020 EPI_ISL_412968_BetaCoV_Japan_Hu_DP_Kng_19-020_2020 EPI_ISL_412973_BetaCoV_Italy_CDG1_2020 EPI_ISL_402132_BetaCoV_Wuhan_HBCDC-HB-01_2019",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        },
+        {
+            "text": "EPI_ISL_408486_BetaCoV_Jiangxi_IVDC-JX-002_2020 EPI_ISL_408430_BetaCoV_France_IDF0515_2020 EPI_ISL_410486_BetaCoV_France_RA739_2020 EPI_ISL_412966_BetaCoV_China_IQTC01_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        },
+        {
+            "text": "EPI_ISL_412969_BetaCoV_Japan_Hu_DP_Kng_19-027_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        },
+        {
+            "text": "EPI_ISL_411219_BetaCoV_France_IDF0386-islP1_2020",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        },
+        {
+            "text": "EPI_ISL_408481_BetaCoV_Chongqing_IVDC-CQ-001_2020 EPI_ISL_412975_BetaCoV_Australia_NSW05_2020 EPI_ISL_406534_BetaCoV_Foshan_20SF207_2020 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 16.20034470 doi: medRxiv preprint . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "16.20034470",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 16.20034470 doi: medRxiv preprint ",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "16.20034470 doi: medRxiv preprint",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "EPI_ISL_402121_BetaCoV_Wuhan_IVDC-HB-05_2019"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Situation Report -43",
+            "authors": [],
+            "year": 2020,
+            "venue": "Coronavirus disease 2019 (COVID-19)",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Emergence of a novel human coronavirus threatening human health",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [
+                        "L M"
+                    ],
+                    "last": "Poon",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Peiris",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Nat Med",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/s41591-020-0796-5"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Nextstrain: real-time tracking of pathogen evolution",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hadfield",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Bioinformatics",
+            "volume": "34",
+            "issn": "",
+            "pages": "4121--4123",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/bty407"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "On the origin and continuing evolution of SARS-CoV-2",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "National Science Review",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nsr/nwaa036"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "On the origin and continuing evolution of SARS-CoV-2",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Maclean",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Orton",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Singer",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Robertson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Mutations can reveal how the coronavirus moves-but they're easy to overinterpret",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kupferschmidt",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "The phylogenetic handbook: A practical approach to phylogenetic analysis and hypothesis testing",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Salemi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.-M",
+                    "middle": [],
+                    "last": "Vandamme",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Lemey",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Global initiative on sharing all influenza datafrom vision to reality",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Shu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mccauley",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Gisaid",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Euro Surveill",
+            "volume": "22",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.2807/1560-7917.ES.2017.22.13.30494"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Sito del Dipartimento della Protezione Civile -Emergenza Coronavirus: la risposta nazionale",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "DAMBE: software package for data analysis in molecular biology and evolution",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xia",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J Hered",
+            "volume": "92",
+            "issn": "",
+            "pages": "371--373",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "TREE-PUZZLE: maximum likelihood phylogenetic analysis using quartets and parallel computing",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Schmidt",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Strimmer",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Vingron",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Von Haeseler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Bioinformatics",
+            "volume": "18",
+            "issn": "",
+            "pages": "502--504",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Likelihood-mapping: a simple method to visualize phylogenetic content of a sequence alignment",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Strimmer",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Von Haeseler",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "94",
+            "issn": "",
+            "pages": "6815--6819",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.94.13.6815"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "BEAST: Bayesian evolutionary analysis by sampling trees",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Drummond",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rambaut",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "BMC Evol Biol",
+            "volume": "7",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2148-7-214"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "An interactive web-based dashboard to track COVID-19 in real time",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gardner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet Infect Dis",
+            "volume": "",
+            "issn": "",
+            "pages": "30120--30121",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1473-3099(20"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "IQ-TREE: a fast and effective stochastic algorithm for estimating maximum-likelihood phylogenies",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Nguyen",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Schmidt",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Von Haeseler",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "Q"
+                    ],
+                    "last": "Minh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Mol Biol Evol",
+            "volume": "32",
+            "issn": "",
+            "pages": "268--274",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/molbev/msu300"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "W-IQ-TREE: a fast online phylogenetic tool for maximum likelihood analysis",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Trifinopoulos",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Nguyen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Von Haeseler",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "Q"
+                    ],
+                    "last": "Minh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Nucleic Acids Res",
+            "volume": "44",
+            "issn": "",
+            "pages": "232--235",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkw256"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Multiple comparisons of log-likelihoods with applications to phylogenetic inference",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Shimodaira",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Hasegawa",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Molecular Biology and Evolution",
+            "volume": "16",
+            "issn": "",
+            "pages": "1114--1116",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Maximum likelihood inference of protein phylogeny and the origin of chloroplasts",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kishino",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Miyata",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Hasegawa",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Journal of Molecular Evolution",
+            "volume": "151",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Exploring the temporal structure of heterochronous sequences using TempEst (formerly Path-O-Gen)",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rambaut",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Lam",
+                    "suffix": ""
+                },
+                {
+                    "first": "Max",
+                    "middle": [],
+                    "last": "Carvalho",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Pybus",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Virus Evol",
+            "volume": "2",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/ve/vew007"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "Maximum-likelihood phylodynamic analysis",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Sagulenko",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Puller",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Neher",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Treetime",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Virus Evol",
+            "volume": "4",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/ve/vex042"
+                ]
+            }
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "MS is supported in part by the Stephany W. Holloway University Chair in AIDS Research. IC was a member of the Italian Parliament (2013-2016). We thank all those who have contributed SARS-CoV-2 genome sequences to the GISAID database (https://www.gisaid.org/).",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Available SARS-CoV-2 genome sequences and reported cases per country.Selected countries for number of provided high quality GISAID genomes (5 or more), orconfirmed cases (200 or more) as of March 10 th 2020. On the x axis we have number the confirmed cases (log10 scale), on the y axis the population in millions (log10 scale). The number of genomes determines dot size and color.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Cladograms of SARS-CoV-2 subclades. Cladograms were extracted from ML phylogenies rooted by enforcing a molecular clock. Colored branches represent country of origin of sampled sequences (tip branches) and ancestral lineages (internal branches). Numbers at nodes indicate ultrafast bootstrap (BB) support (only >90% values are shown). (a) Cladogram of a monophyletic clade within the SARS-CoV-2 ML tree inferred from sequences available on March 3 rd 2020 (Supplementary Figure S1). The subclade including sequences from Italy and Germany, named Subclade A, is highlighted. (b) Cladogram of subclade A of the SARS-CoV-2 ML tree including additional sequences available on March 10 th 2020 (Supplementary Figure S2).",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Phylogenetic and temporal signal analyses. (a) Transition (blue) and transversion (green) nucleotide substitutions (y-axis) vs. pairwise genetic distances (Tamura and Nei 1993 model). (b) Presence of phylogenetic signal was evaluated by likelihood mapping checking for alternative topologies (tips), unresolved quartets (center) and partly resolved quartets (edges) for the data set. (c) Linear regression of root-to-tip genetic distance in a maximum likelihood phylogeny (y-axis) vs. sampling time (x-axis) for each SARS-CoV-2 sequence.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Alternative topology obtained by switching branches in the ML tree inferred from SARS-CoV-2 full genome sequences (Figure 2b and Supplementary Figure S2). 1: Italy (EPI_ISL_412973) switched with Wales (EPI_ISL_413555); 2: Germany (EPI_ISL_406862) with Brazil (EPI_ISL_412964); 3: Portugal (EPI_ISL_413648) with Brazil (EPI_ISL_412964); 4: Germany (EPI_ISL_406862) with Portugal (EPI_ISL_413648). ** LogL: log likelihood estimated for each alternative topology. # DL: difference between LogL and the log likelihood of the original tree (Figure 2b and Supplementary Figure S2). ## SH: Shimodaira-Hasegawa test 17 .",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "Phylogeographic reconstruction of SARS-CoV-2 across the world. Ancestral state reconstruction performed with TreeTime on 169 full genomes of SARS-CoV-2 collected on March 3 rd 2020. Branches are colored by countries of origin.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF8": {
+            "text": "Phylogeographic reconstruction of SARS-CoV-2 across the world. Ancestral state reconstruction performed with TreeTime on 331 full genomes of SARS-CoV-2 collected on March 10 th 2020. Branches are colored by countries of origin.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF1": {
+            "text": "Testing alternative topologies.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Acknowledgment table with full information of genome sequences. Downloaded from GISAID on March 10 th 2020 and provided as Excel file.",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}
