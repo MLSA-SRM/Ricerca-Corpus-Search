@@ -37,8 +37,8 @@ entity_inverse_index = {
 }
 
 
-# for data from content - save to json
-entity_inverse_index = {
+# for documents and doc_id
+doc_db = {
         headers: [
         "document_path",
         "doc_id"
