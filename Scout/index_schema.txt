@@ -1,0 +1,52 @@
+# for data from content
++--------+-----------------+--------------------+---------------------+
+| entity | docList (title) | docList (abstract) | docList (full_text) |
++--------+-----------------+--------------------+---------------------+
+
+# for data from author
++--------+---------+
+| author | docList |
++--------+---------+
+
+# Document ID reference for docList
++------------+---------------+
+| docList_ID | document_path |
++------------+---------------+
+
+
+# for data from content - save to json
+entity_inverse_index = {
+        headers: [
+        "entity",
+        "doc_id"
+    ]
+    data: [
+        {
+            entity: "..."
+            docList_title: [
+                "...",
+            ],
+            docList_abstract: [
+                "...",
+            ],
+            docList_full_text: [
+                "...",
+            ]  
+        },
+    ]
+}
+
+
+# for data from content - save to json
+entity_inverse_index = {
+        headers: [
+        "document_path",
+        "doc_id"
+    ]
+    data: [
+        {
+            document_path: "/.../"
+            doc_id: "..."
+        },
+    ]
+}
