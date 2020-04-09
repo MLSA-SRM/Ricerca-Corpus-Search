@@ -11,41 +11,89 @@ function bm25(searchQuery, path) {
     data_doc = readDocDB(path)
 
     //your code here
-    var listoftitles = [],i;
+    var listoftitles = {
+      titles: [],
+      id: []
+    };
     for(let i=0;i<data_doc.data.length;i++)
     {
-        listoftitles.push(data_doc.data[i].title);
+
+        listoftitles.titles.push(data_doc.data[i].title);
+        listoftitles.id.push(data_doc.data[i].id);
     }
 
     let rt = new retrieval(K=2, B=0.75);
 
-    rt.index(listoftitles);
+    rt.index(listoftitles.titles);
 
-    searchResult = rt.search(searchQuery, 5);
+    searchResult_title = {
+      rankedResults: [],
+      rankedId: []
+    };
 
-
-    var listofabstract = [],j;
-    for(let j=0; j<data_doc.data.length;j++)
+    searchResult_title.rankedResults=rt.search(searchQuery, 5);
+    for(l=0;l<searchResult_title.rankedResults.length;l++)
     {
-        listofabstract.push(data_doc.data[j].abstract);
+      searchResult_title.rankedId.push(listoftitles.id[listoftitles.titles.indexOf(searchResult_title.rankedResults[l])]);
     }
 
-    rt.index(listofabstract);
-
-    searchResult = rt.search(searchQuery, 5);
 
 
-    var listoftext = [],k;
+    var listofabstract = {
+      abstract: [],
+      id: []
+    };
+    for(let j=0; j<data_doc.data.length;j++)
+    {
+        listofabstract.abstract.push(data_doc.data[j].abstract);
+        listofabstract.id.push(data_doc.data[j].id);
+    }
+
+    rt.index(listofabstract.abstract);
+
+    searchResult_abstract = {
+      rankedResults: [],
+      rankedId: []
+    };
+
+    searchResult_abstract.rankedResults=rt.search(searchQuery, 5);
+    for(m=0;m<searchResult_abstract.rankedResults.length;m++)
+    {
+      searchResult_abstract.rankedId.push(listofabstract.id[listofabstract.abstract.indexOf(searchResult_abstract.rankedResults[m])]);
+    }
+
+   var listoftext ={
+     text: [],
+     id: []
+   };
     for(let k=0; k<data_doc.data.length;k++)
     {
-       listoftext.push(data_doc.data[k].abstract);
-     }
+       listoftext.text.push(data_doc.data[k].full_text);
+       listoftext.id.push(data_doc.data[k].id);
+    }
 
-     rt.index(listoftext);
+    rt.index(listoftext.text);
 
-searchResult = rt.search(searchQuery, 5);
+    searchResult_text = {
+      rankedResults: [],
+      rankedId: []
+    };
+
+    searchResult_text.rankedResults=rt.search(searchQuery, 5);
+
+    for(n=0;n<searchResult_text.rankedResults.length;n++)
+    {
+      searchResult_text.rankedId.push(listoftext.id[listoftext.text.indexOf(searchResult_text.rankedResults[n])]);
+    }
+
+
+    searchResult = {
+     title: searchResult_title,
+      abstract: searchResult_abstract,
+      text: searchResult_text
+    };
 
     return searchResult;
 }
 
-console.log(bm25('CHEER', "C:/Users/kljh/Documents/GitHub/Project-ScIRank/Scout/test_data/doc_db.json"));
+console.log(bm25('epidemic', "C:/Users/kljh/Documents/GitHub/Project-ScIRank/Scout/test_data/doc_db.json"));
