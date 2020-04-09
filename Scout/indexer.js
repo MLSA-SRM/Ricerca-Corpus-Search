@@ -1,6 +1,14 @@
 const fs = require('fs');
 const path = require('path')
 const keyw_ext = require('./keyword_extract');
+const mysql = require('mysql');
+
+// const con = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'Qwerty#123',
+//     database: 'test_db'
+// });
 
 function readFiles(callback) {
     fs.readdir('C:/Users/Powerhouse/Documents/GitHub/Project-ScIRank/Scout/test_data/test_json/', function (err, files) {
@@ -81,7 +89,7 @@ function retrieveTitleEntities(data) {
             //console.log(row);
             //add document to db entity if entity exists
             //add new entity and add document to new entity if entity doesn't exist
-
+            plusTitleRow(row);
         }
     }
 }
@@ -137,4 +145,25 @@ function writeDocDB (data) {
     }
     fs.writeFileSync('C:/Users/Powerhouse/Documents/GitHub/Project-ScIRank/Scout/test_data/doc_db.json', JSON.stringify(db));
     //console.log(JSON.parse(fs.readFileSync('C:/Users/Powerhouse/Documents/GitHub/Project-ScIRank/Scout/test_data/doc_db.json')));
+
+    // for (let i=0;i<data.length;i++) {
+    //     doc_id_row = {
+    //         id: data[i].id,
+    //         path: data[i].file_path
+    //     }
+    //     con.query('INSERT INTO doc_id_db SET ?', doc_id_row, (err, res) => {console.log(res);});
+    // }
+
+    // con.end(() => {});
+}
+
+function plusTitleRow(row) {
+    
+    //check for row.entity in table
+    
+
+    //if exists -> check if row.id in [list of id] in title col
+    
+    
+    //if !exists -> add entity and add row.id in [list of id] in title col
 }
