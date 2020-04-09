@@ -88,9 +88,9 @@ function bm25(searchQuery, path) {
 
 
     searchResult = {
-     title: searchResult_title,
-      abstract: searchResult_abstract,
-      text: searchResult_text
+     title: searchResult_title.rankedId,
+      abstract: searchResult_abstract.rankedId,
+      text: searchResult_text.rankedId
     };
 
     return searchResult;
