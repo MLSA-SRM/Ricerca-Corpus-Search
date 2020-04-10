@@ -1,0 +1,26 @@
+{
+  "name": "Project-ScIRank",
+  "version": "1.0.0",
+  "description": "Search engine for Research papers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihirs16/Project-ScIRank.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mihirs16/Project-ScIRank/issues"
+  },
+  "homepage": "https://github.com/mihirs16/Project-ScIRank#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "keyword-extractor": "0.0.18",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7"
+  }
+}
