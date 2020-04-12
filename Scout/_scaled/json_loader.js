@@ -1,14 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const keyw = require('C:\\Users\\Powerhouse\\Documents\\GitHub\\Project-ScIRank\\Scout\\_scaled\\keyword_extract.js');
+const keyw = require('./keyword_extract.js');
 
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
+__path__ = "C:\\Users\\kljh\\Documents\\";
 
 function readJSONFiles(callback) {
-    fs.readdir('C:/Users/Powerhouse/Documents/GitHub/Project-ScIRank/Scout/_test/test_data/test_json/', function (err, files) {
+    fs.readdir('C:/Users/kljh/Documents/GitHub/Project-ScIRank/Scout/_test/test_data/test_json/', function (err, files) {
         var file_list = []
         if (err) {
             return console.log('Unable to scan directory: ' + err);
@@ -25,7 +26,7 @@ function getFilePaths(file_list) {
     var data = [];
     for (let i=0;i<file_list.length;i++) {
         var pathJson = path.join(
-            'C:/Users/Powerhouse/Documents/GitHub/Project-ScIRank/Scout/_test/test_data/test_json',
+            'C:/Users/kljh/Documents/GitHub/Project-ScIRank/Scout/_test/test_data/test_json',
             file_list[i]
         );
         
@@ -52,7 +53,7 @@ async function importJSONFiles (file_list) {
     const items = await dbo.collection('test_db').find({}).toArray();
     
     // create and update entity vs doc_id
-    var coll2 = await dbo.collection('test_en').drop();
+     var coll2 = await dbo.collection('test_en').drop();
     var coll2 = await dbo.createCollection('test_en');
     for (let j=0;j<items.length;j++) {
         var this_doc = await getDataFromDocID(items[j]._id);
@@ -103,7 +104,7 @@ async function importJSONFiles (file_list) {
         
     }
 
-    //console.log(await dbo.collection('test_en').find({}).toArray());
+    console.log(await dbo.collection('test_en').find({}).toArray());
     //console.log(items);
     client.close();
 }
@@ -115,7 +116,7 @@ async function getDataFromDocID(id) {
     var dbo = client.db('mydb');
 
     var pathJson = (await dbo.collection('test_db').find({_id: id}).toArray())[0].file_path;
-    
+  
     //console.log(pathJson);
     client.close();
 
@@ -157,9 +158,11 @@ function reloadDatabase() {
 }
 //getDataFromDocID(2).then((res) => console.log(res));
 
-reloadDatabase();
+// reloadDatabase();
 
 module.exports = {
+    __path__: __path__,
+    url: url,
     reloadDatabase: reloadDatabase,
     getDataFromDocID: getDataFromDocID
 };
