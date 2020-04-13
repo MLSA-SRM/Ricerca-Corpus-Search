@@ -53,8 +53,9 @@ async function searchForTitle(searchQuery) {
 		searchResult_title.rankedId.push(listoftitles.id[listoftitles.titles.indexOf(searchResult_title.rankedResults[l])]);
 	}
 
-	console.log(searchResult_title);
+	//console.log(searchResult_title);
 	client.close()
+	return searchResult_title
 }
 
 //------Search By Abstract--------------
@@ -104,8 +105,9 @@ async function searchForAbstract(searchQuery) {
 		searchResult.rankedId.push(listofabstract.id[listofabstract.abstract.indexOf(searchResult.rankedResults[l])]);
 	}
 
-	console.log(searchResult);
+	//console.log(searchResult);
 	client.close();
+	return searchResult
 }
 
 //------Search By Text--------------
@@ -155,12 +157,20 @@ async function searchForText(searchQuery) {
 		searchResult.rankedId.push(listoftext.id[listoftext.text.indexOf(searchResult.rankedResults[l])]);
 	}
 
-	console.log(searchResult);
+	//console.log(searchResult);
 	client.close()
+	return searchResult
 }
 
 
 //searchForTitle("This is literature for coronavirus and infection");
 // searchForAbstract("This is literature for coronavirus and infection");
 //searchForText("This is literature for coronavirus and infection");
+
+module.exports = {
+	searchForTitle: searchForTitle,
+	searchForAbstract: searchForAbstract,
+	searchForText: searchForText,
+	reloadDatabase: jload.reloadDatabase
+}
 
