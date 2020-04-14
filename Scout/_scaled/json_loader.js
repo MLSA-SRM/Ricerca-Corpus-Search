@@ -7,7 +7,7 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
 function readJSONFiles(callback) {
-    fs.readdir('../Project-ScIRank/Scout/_scaled/test_json/', function (err, files) {
+    fs.readdir('C:/Users/kljh/Documents/Github/Project-ScIRank/Scout/_scaled/test_json/', function (err, files) {
         var file_list = []
         if (err) {
             return console.log('Unable to scan directory: ' + err);
@@ -24,7 +24,7 @@ function getFilePaths(file_list) {
     var data = [];
     for (let i=0;i<file_list.length;i++) {
         var pathJson = path.join(
-            '../Project-ScIRank/Scout/_scaled/test_json/',
+            'C:/Users/kljh/Documents/Github/Project-ScIRank/Scout/_scaled/test_json/',
             file_list[i]
         );
         
