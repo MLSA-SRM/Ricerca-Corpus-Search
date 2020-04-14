@@ -10,26 +10,30 @@ app.get('/', function (req, res) {
     res.send('OK')
 })
 
-app.post('/resultByTitle', function(req, res){ 
-   var searchQ= req.body.searchQuery
+ 
+
+   app.post('/result', function(req, res){
+    var searchQ= req.body.searchQuery
+   if(req.body.searchBy == "title")
+   {
    searchEngine.searchForTitle(searchQ).then((result) => {
         res.send(result)
-    })
+   })
+}
+   if(req.body.searchBy == "abstract")
+   {
+    searchEngine.searchForAbstract(searchQ).then((result) => {
+    res.send(result)
+   })
+}
+   if(req.body.searchBy == "text")
+   {
+    searchEngine.searchForText(searchQ).then((result) => {
+    res.send(result)
+   })
+   }
 })
 
-app.post('/resultByAbstract', function(req, res){ 
-    var searchQ= req.body.searchQuery
-    searchEngine.searchForAbstract(searchQ).then((result) => {
-         res.send(result)
-     })
- })
-
- app.post('/resultByText', function(req, res){ 
-    var searchQ= req.body.searchQuery
-    searchEngine.searchForText(searchQ).then((result) => {
-         res.send(result)
-     })
- })
 
  app.get('/reloadDatabase',function(req,res){
      searchEngine.reloadDatabase()
