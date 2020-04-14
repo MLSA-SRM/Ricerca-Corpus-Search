@@ -171,6 +171,7 @@ module.exports = {
 	searchForTitle: searchForTitle,
 	searchForAbstract: searchForAbstract,
 	searchForText: searchForText,
-	reloadDatabase: jload.reloadDatabase
+	reloadDatabase: jload.reloadDatabase,
+	getDataFromDocID: jload.getDataFromDocID
 }
 

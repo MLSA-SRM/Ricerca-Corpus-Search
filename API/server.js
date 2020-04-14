@@ -17,23 +17,43 @@ app.get('/', function (req, res) {
    if(req.body.searchBy == "title")
    {
    searchEngine.searchForTitle(searchQ).then((result) => {
-        res.send(result)
+      getDocs(result).then((d) => res.send(d))
    })
 }
    if(req.body.searchBy == "abstract")
    {
     searchEngine.searchForAbstract(searchQ).then((result) => {
-    res.send(result)
+    res.send(getDocs(result))
    })
 }
    if(req.body.searchBy == "text")
    {
     searchEngine.searchForText(searchQ).then((result) => {
-    res.send(result)
+    res.send(getDocs(result))
    })
    }
 })
 
+async function getDocs(result) {
+	data = {
+		resultDocs: []
+	};
+	for (let i=0;i<result.rankedId.length;i++) {
+		data.resultDocs.push((await searchEngine.getDataFromDocID(result.rankedId[i])));
+	}
+	return data;
+}
+ 
+//    function getDocs(result) {
+//       data = {
+//          resultDocs: []
+//       };
+//       for (let i=0;i<result.rankedId.length;i++) {
+//          data.resultDocs.push(searchEngine.getDataFromDocID(result.rankedId[i]));
+//          console.log(searchEngine.getDataFromDocID(result.rankedId[i]))
+//       }
+//       return data;
+// }
 
  app.get('/reloadDatabase',function(req,res){
      searchEngine.reloadDatabase()
