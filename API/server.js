@@ -5,31 +5,56 @@ var bodyParser = require("body-parser")
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-    res.send('OK')
+   res.sendFile( __dirname + "/" + "index.html" );
 })
 
-app.post('/resultByTitle', function(req, res){ 
-   var searchQ= req.body.searchQuery
+ 
+
+   app.get('/search', function(req, res){
+    var searchQ= req.body.searchtext
+   if(req.body.selectby == "title")
+   {
    searchEngine.searchForTitle(searchQ).then((result) => {
-        res.send(result)
-    })
+      getDocs(result).then((d) => res.send(d))
+   })
+}
+   if(req.body.selectby == "abstract")
+   {
+    searchEngine.searchForAbstract(searchQ).then((result) => {
+    res.send(getDocs(result))
+   })
+}
+   if(req.body.selectby == "text")
+   {
+    searchEngine.searchForText(searchQ).then((result) => {
+    res.send(getDocs(result))
+   })
+   }
 })
 
-app.post('/resultByAbstract', function(req, res){ 
-    var searchQ= req.body.searchQuery
-    searchEngine.searchForAbstract(searchQ).then((result) => {
-         res.send(result)
-     })
- })
-
- app.post('/resultByText', function(req, res){ 
-    var searchQ= req.body.searchQuery
-    searchEngine.searchForText(searchQ).then((result) => {
-         res.send(result)
-     })
- })
+async function getDocs(result) {
+	data = {
+		resultDocs: []
+	};
+	for (let i=0;i<result.rankedId.length;i++) {
+		data.resultDocs.push((await searchEngine.getDataFromDocID(result.rankedId[i])));
+	}
+	return data;
+}
+ 
+//    function getDocs(result) {
+//       data = {
+//          resultDocs: []
+//       };
+//       for (let i=0;i<result.rankedId.length;i++) {
+//          data.resultDocs.push(searchEngine.getDataFromDocID(result.rankedId[i]));
+//          console.log(searchEngine.getDataFromDocID(result.rankedId[i]))
+//       }
+//       return data;
+// }
 
  app.get('/reloadDatabase',function(req,res){
      searchEngine.reloadDatabase()
