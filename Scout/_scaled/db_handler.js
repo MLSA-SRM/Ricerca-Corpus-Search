@@ -4,7 +4,7 @@ const path = require('path');
 const keyw = require('./keyword_extract.js');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var url = "mongodb+srv://ricera:scirank@cluster0-a9sai.azure.mongodb.net/test?retryWrites=true&w=majority";
 
 function readJSONFiles(callback) {
     fs.readdir('../Project-ScIRank/Scout/_scaled/test_json/', function (err, files) {
@@ -70,7 +70,7 @@ async function importJSONFiles (file_list) {
     if (fileLastRead) {
         await dbo.collection('test_db').findOneAndDelete({_id: fileLastRead._id});
     }
-    filesAlreadyRead = await dbo.collection('test_db').find({}).toArray();
+    filesAlreadyRead = filesAlreadyRead.slice(0, filesAlreadyRead.length);
 
     let filesToRead = data.filter(a => !filesAlreadyRead.map(b => b._id).includes(a._id));
     console.log("Files to read" + " " + filesToRead.length.toString());
