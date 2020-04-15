@@ -189,7 +189,7 @@ function reloadDatabase() {
 }
 //getDataFromDocID(2).then((res) => console.log(res));
 
-reloadDatabase();
+//reloadDatabase();
 
 module.exports = {
     url: url,
