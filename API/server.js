@@ -5,28 +5,29 @@ var bodyParser = require("body-parser")
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-    res.send('OK')
+   res.sendFile( __dirname + "/" + "index.html" );
 })
 
  
 
-   app.post('/result', function(req, res){
-    var searchQ= req.body.searchQuery
-   if(req.body.searchBy == "title")
+   app.get('/search', function(req, res){
+    var searchQ= req.body.searchtext
+   if(req.body.selectby == "title")
    {
    searchEngine.searchForTitle(searchQ).then((result) => {
       getDocs(result).then((d) => res.send(d))
    })
 }
-   if(req.body.searchBy == "abstract")
+   if(req.body.selectby == "abstract")
    {
     searchEngine.searchForAbstract(searchQ).then((result) => {
     res.send(getDocs(result))
    })
 }
-   if(req.body.searchBy == "text")
+   if(req.body.selectby == "text")
    {
     searchEngine.searchForText(searchQ).then((result) => {
     res.send(getDocs(result))

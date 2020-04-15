@@ -1,0 +1,110 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    
+  
+    text-align: left;
+    font: Regular Montserrat;
+    letter-spacing: -2.4px;
+    color: #0A4677;
+    font-size: 4rem;
+}
+.bglight {
+  background-color: #F5F8FA;
+}
+.searchform{
+  margin-left: 5%;
+  width: 100%;
+}
+
+.searchicon{
+  color: #3385BE;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.search{
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+
+    width:40%;
+    border:1px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+
+
+.search:focus{
+    border-color:#5095C7;
+    box-shadow:0 0 8px 0 #5095C7;
+  }
+
+  .input-group-append .btn, .input-group-prepend .btn {
+    position: relative;
+    z-index: 2;
+    height: 42px;
+}
+
+.searchby{
+    border:1px solid #aaa;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    height: 42px;
+    width: 10%;
+}
+
+.searchby:focus{
+    border-color:#5095C7;
+    box-shadow:0 0 8px 0 #5095C7;
+}
+.searchbtn{
+  height: 42px;
+  background-color: #5095C7;
+  border-color: #5095C7;
+}
+.searchbtn:hover{
+  height: 42px;
+  background-color: #5095C7;
+  border-color: #5095C7;
+}
+a{
+  color: #3284BE;
+}
+a:hover{
+  text-decoration: none;
+}
+.discription{
+  text-align: justify;
+}
+
+@media(max-width: 600px){
+    .search{
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 10px;
+    
+        width:90%;
+        border:1px solid #aaa;
+        border-radius:4px;
+        margin:8px 0;
+        outline:none;
+        padding:8px;
+        box-sizing:border-box;
+        transition:.3s;
+      }
+      .searchby{
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 4px;
+        height: 45px;
+        width: 30%;
+      }
+      .searchby-mob{
+        width: 100%;
+      }
+      
+}

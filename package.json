@@ -2,9 +2,10 @@
   "name": "Project-ScIRank",
   "version": "1.0.0",
   "description": "Search engine for Research papers",
-  "main": "index.js",
+  "main": "./API/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./API/server.js"
   },
   "repository": {
     "type": "git",
