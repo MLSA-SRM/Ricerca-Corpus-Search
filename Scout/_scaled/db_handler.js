@@ -4,10 +4,10 @@ const path = require('path');
 const keyw = require('./keyword_extract.js');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://ricera:scirank@cluster0-a9sai.azure.mongodb.net/test?retryWrites=true&w=majority";
+var url = "mongodb://localhost:27017";
 
 function readJSONFiles(callback) {
-    fs.readdir('../Project-ScIRank/Scout/_scaled/test_json/', function (err, files) {
+    fs.readdir(__dirname + '/test_json/', function (err, files) {
         var file_list = []
         if (err) {
             return console.log('Unable to scan directory: ' + err);
@@ -24,7 +24,7 @@ function getFilePaths(file_list) {
     var data = [];
     for (let i=0;i<file_list.length;i++) {
         var pathJson = path.join(
-            '../Project-ScIRank/Scout/_scaled/test_json/',
+            '/test_json/',
             file_list[i]
         );
         
@@ -57,8 +57,8 @@ async function importJSONFiles (file_list) {
 
     // cleanup
     if (checkExists(cols, 'test_db') && checkExists(cols, 'test_en')) {
-        // await dbo.collection('test_db').drop();
-        // await dbo.collection('test_en').drop();
+        await dbo.collection('test_db').drop();
+        await dbo.collection('test_en').drop();
         
     } else {
         await dbo.createCollection('test_db')
@@ -138,8 +138,9 @@ async function getDataFromDocID(id) {
 
     //console.log(await dbo.collection('test_db').find({_id: id}).toArray())[0].file_path;
     var pathJson = (await dbo.collection('test_db').find({_id: id}).toArray())[0].file_path;
-  
+    pathJson = __dirname + pathJson;
     //console.log(pathJson);
+    
     client.close();
 
     var readTest = fs.readFileSync(pathJson);
@@ -187,9 +188,10 @@ async function getDataFromDocID(id) {
 function reloadDatabase() {
     readJSONFiles(importJSONFiles);
 }
-//getDataFromDocID(2).then((res) => console.log(res));
 
 //reloadDatabase();
+//getDataFromDocID(0);
+//console.log(__dirname);
 
 module.exports = {
     url: url,
