@@ -2,7 +2,7 @@
 const retrieval = require('retrieval');
 
 const keyw = require("../Scout/_scaled/keyword_extract")
-const jload = require("../Scout/_scaled/json_loader")
+const jload = require("../Scout/_scaled/db_handler.js")
 
 const MongoClient = require("mongodb").MongoClient;
 
