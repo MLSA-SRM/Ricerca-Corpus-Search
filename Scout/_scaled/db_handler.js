@@ -32,29 +32,54 @@ function getFilePaths(file_list) {
             _id: i,
             file_path: pathJson
         }
-
-        //console.log(data_unit.authors);
         data.push(data_unit);
     }
     return data;
 }
 
+
 async function importJSONFiles (file_list) {
     data = getFilePaths(file_list);
    
-    // create and update document vs doc_id
     const client = await MongoClient.connect(url);
     var dbo = client.db("mydb");
-    var drops = await dbo.collection('test_db').drop();
-    var coll1 = await dbo.createCollection('test_db');                                       
-    var ins1 = await dbo.collection("test_db").insertMany(data);
-    const items = await dbo.collection('test_db').find({}).toArray();
-    
-    // create and update entity vs doc_id
-     var coll2 = await dbo.collection('test_en').drop();
-    var coll2 = await dbo.createCollection('test_en');
-    for (let j=0;j<items.length;j++) {
-        var this_doc = await getDataFromDocID(items[j]._id);
+
+    var cols = await dbo.listCollections().toArray();
+    function checkExists (cols, str){
+        _x = []
+        for (let i=0;i<cols.length;i++) {
+            if (str == (cols[i].name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // cleanup
+    if (checkExists(cols, 'test_db') && checkExists(cols, 'test_en')) {
+        // await dbo.collection('test_db').drop();
+        // await dbo.collection('test_en').drop();
+        
+    } else {
+        await dbo.createCollection('test_db')
+        await dbo.createCollection('test_en')
+    }
+
+    let filesAlreadyRead = await dbo.collection('test_db').find({}).toArray();
+    let fileLastRead = filesAlreadyRead[filesAlreadyRead.length-1];
+    if (fileLastRead) {
+        await dbo.collection('test_db').findOneAndDelete({_id: fileLastRead._id});
+    }
+    filesAlreadyRead = await dbo.collection('test_db').find({}).toArray();
+
+    let filesToRead = data.filter(a => !filesAlreadyRead.map(b => b._id).includes(a._id));
+    console.log("Files to read" + " " + filesToRead.length.toString());
+
+    for (let i=0;i<filesToRead.length;i++) {    
+        console.log('Reading ' + filesToRead[i]._id.toString() + ' ' + filesToRead[i].file_path.toString())
+        var ins1 = await dbo.collection("test_db").insertOne(filesToRead[i]);
+        var this_doc = await getDataFromDocID(filesToRead[i]._id);
+
         var entities = {
             fromTitle: keyw.return_keyword(this_doc.title),
             fromAbstract: keyw.return_keyword(this_doc.abstract),
@@ -99,11 +124,9 @@ async function importJSONFiles (file_list) {
                 var wr = await dbo.collection('test_en').insertOne({entity: this_entity, fromTitle: [], fromAbstract: [], fromText: [this_doc._id]});    
             } 
         }
-        
+        console.log('Read ' + filesToRead[i]._id.toString() + ' ' + filesToRead[i].file_path.toString());
     }
-
-    console.log(await dbo.collection('test_en').find({}).toArray());
-    //console.log(items);
+    console.log(await dbo.collection('test_db').find({}).toArray());
     client.close();
 }
 
@@ -122,22 +145,31 @@ async function getDataFromDocID(id) {
     var readTest = fs.readFileSync(pathJson);
     var dataThis = JSON.parse(readTest);
 
-    var title = dataThis.metadata.title;
-
-    var abstract = '';
-    for (let i=0;i<dataThis.abstract.length;i++) {
-        abstract += " " + dataThis.abstract[i].text;
+    if (dataThis.metadata.title) {
+        var title = dataThis.metadata.title;
+    }
+        
+    if (dataThis.abstract) {
+        var abstract = '';
+        for (let i=0;i<dataThis.abstract.length;i++) {
+            abstract += " " + dataThis.abstract[i].text;
+        }
     }
 
-    var full_text = '';
-    for (let i=0;i<dataThis.body_text.length;i++) {
-        full_text += " " + dataThis.body_text[i].text;
+    if (dataThis.body_text){
+        var full_text = '';
+        for (let i=0;i<dataThis.body_text.length;i++) {
+            full_text += " " + dataThis.body_text[i].text;
+        }
     }
 
-    var authors = [];
-    for (let i=0;i<dataThis.metadata.authors.length;i++) {
-        authors.push(dataThis.metadata.authors[i].first)
+    if (dataThis.metadata.authors) {
+        var authors = [];
+        for (let i=0;i<dataThis.metadata.authors.length;i++) {
+            authors.push(dataThis.metadata.authors[i].first)
+        }
     }
+
 
     data_this_doc = {
         _id: id,
@@ -157,7 +189,7 @@ function reloadDatabase() {
 }
 //getDataFromDocID(2).then((res) => console.log(res));
 
-//reloadDatabase();
+reloadDatabase();
 
 module.exports = {
     url: url,
