@@ -76,12 +76,25 @@ body{
 a{
   color: #3284BE;
 }
+
+.title{
+  width: 80%;
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 a:hover{
   text-decoration: none;
 }
 .discription{
   text-align: justify;
 }
+/* .abstract{
+    height: 3.6em; 
+    text-overflow: -o-ellipsis-lastline;
+} */
+
 
 @media(max-width: 600px){
     .search{

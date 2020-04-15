@@ -3,19 +3,23 @@ const searchEngine = require('../Search/bm25_test.js')
 var app = express()
 var bodyParser = require("body-parser")
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.engine('html', require('ejs').renderFile);
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
    res.sendFile( __dirname + "/" + "index.html" );
 })
 
-app.get('/search', function(req, res){
+app.post('/search', function(req, res){
     var searchQ= req.body.searchtext
     if(req.body.selectby == "title") {
         searchEngine.searchForTitle(searchQ).then((result) => {
-        getDocs(result).then((d) => res.send(d))
+        getDocs(result).then((d) => res.render('searchresult.html', {
+          d:d,
+          searchtext:searchQ,
+        }))
         });
     }
     if(req.body.selectby == "abstract") {
