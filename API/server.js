@@ -21,27 +21,34 @@ app.post('/search', function(req, res){
           searchtext:searchQ,
         }))
         });
-    }
-    if(req.body.selectby == "abstract") {
+    } else if(req.body.selectby == "abstract") {
         searchEngine.searchForAbstract(searchQ).then((result) => {
-        res.send(getDocs(result))
+        getDocs(result).then((d) => res.render('searchresult.html', {
+            d:d,
+            searchtext:searchQ,
+        }))
         });
-    }
-    if(req.body.selectby == "text") {
+    } else if(req.body.selectby == "text") {
         searchEngine.searchForText(searchQ).then((result) => {
-        res.send(getDocs(result))
-        })
+        getDocs(result).then((d) => res.render('searchresult.html', {
+            d:d,
+            searchtext:searchQ,
+        }))
+        });
+    } else {
+        
     }
 })
 
 async function getDocs(result) {
 	data = {
 		resultDocs: []
-	};
+    };
+    // console.log(result.rankedId);
 	for (let i=0;i<result.rankedId.length;i++) {
 		data.resultDocs.push((await searchEngine.getDataFromDocID(result.rankedId[i])));
-	}
-	return data;
+    }
+    return data;
 }
 
 app.get('/reloadDatabase', function(req, res){
