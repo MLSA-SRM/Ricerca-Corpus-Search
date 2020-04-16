@@ -22,7 +22,7 @@
         </div>
 
         <div class="container">
-            <form class="form-inline searchform my-4" method="GET" action="/search">
+            <form class="form-inline searchform my-4" action="search" method="POST" >
 
                 <div class="d-none d-lg-inline d-sm-none " style="vertical-align: middle;">
                     <i class="material-icons searchicon prefix">search</i>
@@ -35,53 +35,25 @@
                         <option value="text">Text</option>
                     </select>
                 </div>
-                <input type="text" name="searchtext" class="search my-4 mx-1" placeholder="Search">
+                <input type="text" name="searchtext" class="search my-4 mx-1" value="<%= searchtext %>" placeholder="Search">
                 <button type="submit" class="btn btn-primary mx-1 searchbtn">Search</button>
             </form>
         </div>
     </nav>
 
     <div class="container my-4">
-        <div class="content mx-5 my-5 px-5">
-            <div class="title">
-                <h4><a href="#">Lorem ipsum dolor sit amet consectetur</a></h4>
+        
+        <% d.resultDocs.forEach(function(i){ %>
+        <div class="content mx-lg-5 my-5 px-lg-5">
+            <div>
+                <h4 class="title"><a href="#"><%= i.title %></a></h4>
             </div>
             <div class="discription">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At et itaque aperiam dicta unde debitis
-                    ipsum rerum quisquam voluptas esse minima quibusdam ratione harum, exercitationem blanditiis atque
-                    totam nemo. Asperiores.</p>
+                <p class="abstract"><%= i.abstract %></p>
             </div>
         </div>
-        <div class="content mx-5 my-5 px-5">
-            <div class="title">
-                <h4><a href="#">Lorem ipsum dolor sit amet consectetur</a></h4>
-            </div>
-            <div class="discription">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At et itaque aperiam dicta unde debitis
-                    ipsum rerum quisquam voluptas esse minima quibusdam ratione harum, exercitationem blanditiis atque
-                    totam nemo. Asperiores.</p>
-            </div>
-        </div>
-        <div class="content mx-5 my-5 px-5">
-            <div class="title">
-                <h4><a href="#">Lorem ipsum dolor sit amet consectetur</a></h4>
-            </div>
-            <div class="discription">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At et itaque aperiam dicta unde debitis
-                    ipsum rerum quisquam voluptas esse minima quibusdam ratione harum, exercitationem blanditiis atque
-                    totam nemo. Asperiores.</p>
-            </div>
-        </div>
-        <div class="content mx-5 my-5 px-5">
-            <div class="title">
-                <h4><a href="#">Lorem ipsum dolor sit amet consectetur</a></h4>
-            </div>
-            <div class="discription">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At et itaque aperiam dicta unde debitis
-                    ipsum rerum quisquam voluptas esse minima quibusdam ratione harum, exercitationem blanditiis atque
-                    totam nemo. Asperiores.</p>
-            </div>
-        </div>
+        <% }) %>
+        
     </div>
 
 

@@ -20,9 +20,11 @@
   "homepage": "https://github.com/mihirs16/Project-ScIRank#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "ejs": "^3.0.2",
     "express": "^4.17.1",
     "keyword-extractor": "0.0.18",
     "mongodb": "^3.5.5",
+    "nodemon": "^2.0.3",
     "retrieval": "^1.7.2"
   }
 }
