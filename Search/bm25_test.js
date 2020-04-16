@@ -1,40 +1,46 @@
 	//const fs = require('fs')
 const retrieval = require('retrieval');
+const str_sim = require('string-similarity');
 
-const keyw = require("../Scout/_scaled/keyword_extract")
-const jload = require("../Scout/_scaled/db_handler.js")
+const keyw = require("../Scout/_scaled/keyword_extract");
+const jload = require("../Scout/_scaled/db_handler.js");
 
 const MongoClient = require("mongodb").MongoClient;
 
+function returnEntityFromSearchQ (items, searchQuery) {
+	keywFromSearchQ = keyw.return_keyword(searchQuery);
+	var entityFromSearchQ = [];
+	var fromSearch = [];
+	for(var i=0; i<items.length; i++) fromSearch.push(items[i].entity);
+	for (var i=0;i<keywFromSearchQ.length;i++) {
+		entityFromSearchQ.push(str_sim.findBestMatch(keywFromSearchQ[i], fromSearch).bestMatch.target);
+	}
+	console.log(entityFromSearchQ);
+	return entityFromSearchQ;
+}
 
 //------Search By Title--------------
 async function searchForTitle(searchQuery) {
-	keywFromSearchQ = keyw.return_keyword(searchQuery);
-
 	const client = await MongoClient.connect(jload.url);
 	var dbo = client.db("mydb");
 	const items = await dbo.collection("test_en").find({}).toArray();
 
-	entityFromSearchQ = [];
-	for(i=0; i<items.length; i++) {
-		for(e=0;e<keywFromSearchQ.length;e++) {
-			if(keywFromSearchQ[e] == items[i].entity) {
-				entityFromSearchQ.push(keywFromSearchQ[e]);
-			}
-		}
-	}
+	entityFromSearchQ = returnEntityFromSearchQ(items, searchQuery);
+	searchQueryMod = entityFromSearchQ.join(' ');
 
 	titleID = [];
 	for(l=0;l<keywFromSearchQ.length;l++) {
 		var kw = await dbo.collection("test_en").find({entity: entityFromSearchQ[l]}).toArray()
 		titleID = [...titleID, ...kw[0].fromTitle]
+		
 	}
 	titleID = [...(new Set(titleID))]
-	
+
 	titlefromID = []
 	for(x=0;x<titleID.length;x++) {
 		titlefromID.push((await jload.getDataFromDocID(titleID[x])).title)
 	}
+	//console.log(titlefromID);
 
 	var listoftitles = {
 		titles: titlefromID,
@@ -44,36 +50,28 @@ async function searchForTitle(searchQuery) {
 	let rt = new retrieval(K = 2, B = 0.75);
 	rt.index(listoftitles.titles);
 
-	searchResult_title = {
+	searchResult = {
 		rankedResults: [],
 		rankedId: []
 	};
-	searchResult_title.rankedResults = rt.search(searchQuery, 5);
-	for (l = 0; l < searchResult_title.rankedResults.length; l++) {
-		searchResult_title.rankedId.push(listoftitles.id[listoftitles.titles.indexOf(searchResult_title.rankedResults[l])]);
+	searchResult.rankedResults = rt.search(searchQueryMod, 5);
+	for (l = 0; l < searchResult.rankedResults.length; l++) {
+		searchResult.rankedId.push(listoftitles.id[listoftitles.titles.indexOf(searchResult.rankedResults[l])]);
 	}
 
-	//console.log(searchResult_title);
+	console.log(searchResult.rankedId);
 	client.close()
-	return searchResult_title
+	return searchResult;
 }
 
 //------Search By Abstract--------------
 async function searchForAbstract(searchQuery) {
-	keywFromSearchQ = keyw.return_keyword(searchQuery);
-
 	const client = await MongoClient.connect(jload.url);
 	var dbo = client.db("mydb");
 	const items = await dbo.collection("test_en").find({}).toArray();
 
-	entityFromSearchQ = [];
-	for(i=0; i<items.length; i++) {
-		for(e=0;e<keywFromSearchQ.length;e++) {
-			if(keywFromSearchQ[e] == items[i].entity) {
-				entityFromSearchQ.push(keywFromSearchQ[e]);
-			}
-		}
-	}
+	entityFromSearchQ = returnEntityFromSearchQ(items, searchQuery);
+	searchQueryMod = entityFromSearchQ.join(' ');
 
 	abstractID = [];
 	for(l=0;l<keywFromSearchQ.length;l++) {
@@ -100,32 +98,24 @@ async function searchForAbstract(searchQuery) {
 		rankedId: []
 	};
 	
-	searchResult.rankedResults = rt.search(searchQuery, 5);
+	searchResult.rankedResults = rt.search(searchQueryMod, 5);
 	for (l = 0; l < searchResult.rankedResults.length; l++) {
 		searchResult.rankedId.push(listofabstract.id[listofabstract.abstract.indexOf(searchResult.rankedResults[l])]);
 	}
 
-	//console.log(searchResult);
+	console.log(searchResult.rankedId);
 	client.close();
 	return searchResult
 }
 
 //------Search By Text--------------
 async function searchForText(searchQuery) {
-	keywFromSearchQ = keyw.return_keyword(searchQuery);
-
 	const client = await MongoClient.connect(jload.url);
 	var dbo = client.db("mydb");
 	const items = await dbo.collection("test_en").find({}).toArray();
 
-	entityFromSearchQ = [];
-	for(i=0; i<items.length; i++) {
-		for(e=0;e<keywFromSearchQ.length;e++) {
-			if(keywFromSearchQ[e] == items[i].entity) {
-				entityFromSearchQ.push(keywFromSearchQ[e]);
-			}
-		}
-	}
+	entityFromSearchQ = returnEntityFromSearchQ(items, searchQuery);
+	searchQueryMod = entityFromSearchQ.join(' ');
 
 	textID = [];
 	for(l=0;l<keywFromSearchQ.length;l++) {
@@ -152,12 +142,12 @@ async function searchForText(searchQuery) {
 		rankedId: []
 	};
 	
-	searchResult.rankedResults = rt.search(searchQuery, 5);
+	searchResult.rankedResults = rt.search(searchQueryMod, 5);
 	for (l = 0; l < searchResult.rankedResults.length; l++) {
 		searchResult.rankedId.push(listoftext.id[listoftext.text.indexOf(searchResult.rankedResults[l])]);
 	}
 
-	//console.log(searchResult);
+	console.log(searchResult.rankedId);
 	client.close()
 	return searchResult
 }
