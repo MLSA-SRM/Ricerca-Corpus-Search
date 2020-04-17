@@ -18,7 +18,7 @@
 
 
         <div class="logo mx-4 my-3">
-           <a href="/">ricerca</a> 
+            <a href="/">ricerca</a> 
         </div>
 
         
@@ -43,7 +43,7 @@
     </nav>
 
     <div class="container my-4">
-        <% if ((d.resultDocs).length===0) { %>
+        <% if ((d.resultDocs).length===0 && (e.resultDocs).length===0 && (f.resultDocs).length===0 ) { %>
             <div class="content mx-lg-5 my-5 px-lg-5">
                 Your search - <%= searchtext %> - did not match any documents. <br> <br>
 
@@ -55,7 +55,8 @@
                     <li>Try fewer keywords.</li>
                 </ul>
             </div>
-            <%} else { %>
+            <%} if((d.resultDocs).length!=0) { %>
+                <h2>Search Result for Title :</h2>
         <% d.resultDocs.forEach(function(i){ %>
         <div class="content mx-lg-5 my-5 px-lg-5">
             <div>
@@ -63,6 +64,33 @@
             </div>
             <div class="discription">
                 <p class="abstract"><%= i.abstract %></p>
+            </div>
+            <hr>
+        </div>
+        <% }) %>
+        <%}  if((e.resultDocs).length!=0) { %>
+
+        <h2>Search Result for Abstract :</h2>
+        <% e.resultDocs.forEach(function(j){ %>
+        <div class="content mx-lg-5 my-5 px-lg-5">
+            <div>
+                <h4 class="title"><a href="#"><%= j.title %></a></h4>
+            </div>
+            <div class="discription">
+                <p class="abstract"><%= j.abstract %></p>
+            </div>
+            <hr>
+        </div>
+        <% }) %>
+        <%} if((f.resultDocs).length!=0) { %>
+        <h2>Search Result for Text :</h2>
+        <% f.resultDocs.forEach(function(k){ %>
+        <div class="content mx-lg-5 my-5 px-lg-5">
+            <div>
+                <h4 class="title"><a href="#"><%= k.title %></a></h4>
+            </div>
+            <div class="discription">
+                <p class="abstract"><%= k.abstract %></p>
             </div>
             <hr>
         </div>
@@ -82,7 +110,7 @@
     </script>
     <script src="clamp.js"></script>
     <script>
-        for ( i = 0; i < <%= d.resultDocs.length %> ; i++) {
+        for ( i = 0; i < <%= d.resultDocs.length + e.resultDocs.length + f.resultDocs.length %> ; i++) {
             header = document.getElementsByTagName('body')[0].getElementsByTagName('p')[i]
             $clamp(header, {clamp: 3})
             console.log("done")
