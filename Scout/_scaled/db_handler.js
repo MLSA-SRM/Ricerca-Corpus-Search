@@ -83,7 +83,8 @@ async function importJSONFiles (file_list) {
         var entities = {
             fromTitle: keyw.return_keyword(this_doc.title),
             fromAbstract: keyw.return_keyword(this_doc.abstract),
-            fromText: keyw.return_keyword(this_doc.full_text)
+            fromText: keyw.return_keyword(this_doc.full_text),
+            fromAuthors: this_doc.authors
         };
 
         // entities from title
@@ -95,7 +96,7 @@ async function importJSONFiles (file_list) {
                 updatedIDs.push(this_doc._id)
                 var wr = await dbo.collection('test_en').updateOne({entity: this_entity}, {$set: {fromTitle: updatedIDs}});
             } else {
-                var wr = await dbo.collection('test_en').insertOne({entity: this_entity, fromTitle: [this_doc._id], fromAbstract: [], fromText: []});    
+                var wr = await dbo.collection('test_en').insertOne({entity: this_entity, fromTitle: [this_doc._id], fromAbstract: [], fromText: [], fromAuthors: []});    
             } 
         }
 
@@ -108,7 +109,7 @@ async function importJSONFiles (file_list) {
                 updatedIDs.push(this_doc._id)
                 var wr = await dbo.collection('test_en').updateOne({entity: this_entity}, {$set: {fromAbstract: updatedIDs}});
             } else { 
-                var wr = await dbo.collection('test_en').insertOne({entity: this_entity, fromTitle: [], fromAbstract: [this_doc._id], fromText: []});    
+                var wr = await dbo.collection('test_en').insertOne({entity: this_entity, fromTitle: [], fromAbstract: [this_doc._id], fromText: [], fromAuthors: []});    
             } 
         }
 
@@ -121,25 +122,36 @@ async function importJSONFiles (file_list) {
                 updatedIDs.push(this_doc._id)
                 var wr = await dbo.collection('test_en').updateOne({entity: this_entity}, {$set: {fromText: updatedIDs}});
             } else {
-                var wr = await dbo.collection('test_en').insertOne({entity: this_entity, fromTitle: [], fromAbstract: [], fromText: [this_doc._id]});    
+                var wr = await dbo.collection('test_en').insertOne({entity: this_entity, fromTitle: [], fromAbstract: [], fromText: [this_doc._id], fromAuthors: []});    
             } 
         }
+
+        // entities from authors
+        for (let x=0;x<entities.fromAuthors.length;x++) {
+            let this_entity = entities.fromAuthors[x]
+            var res = await dbo.collection('test_en').findOne({entity: this_entity});
+            if(res) {
+                var updatedIDs = res.fromAuthors;
+                updatedIDs.push(this_doc._id)
+                var wr = await dbo.collection('test_en').updateOne({entity: this_entity}, {$set: {fromAuthors: updatedIDs}});
+            } else {
+                var wr = await dbo.collection('test_en').insertOne({entity: this_entity, fromTitle: [], fromAbstract: [], fromText: [], fromAuthors: [this_doc._id]});    
+            }
+        }
+
         console.log('Read ' + filesToRead[i]._id.toString() + ' ' + filesToRead[i].file_path.toString());
     }
-    console.log(await dbo.collection('test_db').find({}).toArray());
+    //console.log(await dbo.collection('test_en').find({entity: 'Sarah'}).toArray());
     client.close();
 }
 
-
+//get id and details from data_doc
 async function getDataFromDocID(id) {
-    //get id and details from data_doc
     const client = await MongoClient.connect(url);
     var dbo = client.db('mydb');
 
-    //console.log(await dbo.collection('test_db').find({_id: id}).toArray())[0].file_path;
     var pathJson = (await dbo.collection('test_db').find({_id: id}).toArray())[0].file_path;
     pathJson = __dirname + pathJson;
-    //console.log(pathJson);
     
     client.close();
 
@@ -167,7 +179,16 @@ async function getDataFromDocID(id) {
     if (dataThis.metadata.authors) {
         var authors = [];
         for (let i=0;i<dataThis.metadata.authors.length;i++) {
-            authors.push(dataThis.metadata.authors[i].first)
+            let thisFirst = (dataThis.metadata.authors[i].first);
+            let thisMidle = (dataThis.metadata.authors[i].middle);
+            let thisLast = (dataThis.metadata.authors[i].last);
+            let thisName = '';
+            if (thisFirst != '') thisName = thisName + thisFirst + ' ';
+            if (thisMidle != '') thisName = thisName + thisMidle + ' ';
+            if (thisLast != '') thisName = thisName + thisLast;
+            if (thisName[0] == ' ') thisName = thisName.slice(1, thisName.length);
+            if (thisName[thisName.length-1] == ' ') thisName = thisName.slice(0, thisName.length-1);
+            authors.push(thisName);
         }
     }
 
@@ -190,7 +211,7 @@ function reloadDatabase() {
 }
 
 //reloadDatabase();
-//getDataFromDocID(0);
+//getDataFromDocID(2);
 //console.log(__dirname);
 
 module.exports = {

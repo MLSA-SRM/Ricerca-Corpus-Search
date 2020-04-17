@@ -16,27 +16,32 @@ app.post('/search', function(req, res){
     var searchQ= req.body.searchtext
     if(req.body.selectby == "title") {
         searchEngine.searchForTitle(searchQ).then((result) => {
-        getDocs(result).then((d) => res.render('searchresult.html', {
-          d:d,
-          searchtext:searchQ,
-        }))
+            getDocs(result).then((d) => res.render('searchresult.html', {
+            d:d,
+            searchtext:searchQ,
+            }))
         });
     } else if(req.body.selectby == "abstract") {
         searchEngine.searchForAbstract(searchQ).then((result) => {
-        getDocs(result).then((d) => res.render('searchresult.html', {
-            d:d,
-            searchtext:searchQ,
-        }))
+            getDocs(result).then((d) => res.render('searchresult.html', {
+                d:d,
+                searchtext:searchQ,
+            }))
         });
     } else if(req.body.selectby == "text") {
         searchEngine.searchForText(searchQ).then((result) => {
-        getDocs(result).then((d) => res.render('searchresult.html', {
-            d:d,
-            searchtext:searchQ,
-        }))
+            getDocs(result).then((d) => res.render('searchresult.html', {
+                d:d,
+                searchtext:searchQ,
+            }))
         });
-    } else {
-        
+    } else if(req.body.selectby == "author") {
+        searchEngine.searchForAuthor(searchQ).then((result) => {
+            getDocs(result).then((d) => res.render('searchresult.html', {
+                d:d,
+                searchtext:searchQ,
+            }))
+        });
     }
 })
 

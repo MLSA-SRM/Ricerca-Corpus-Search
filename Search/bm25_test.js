@@ -152,6 +152,47 @@ async function searchForText(searchQuery) {
 	return searchResult
 }
 
+//------Search By Author--------------
+async function searchForAuthor(searchQuery) {
+	const client = await MongoClient.connect(jload.url);
+	var dbo = client.db("mydb");
+	const items = await dbo.collection("test_en").find({}).toArray();
+
+	entityFromSearchQ = returnEntityFromSearchQ(items, searchQuery);
+	searchQueryMod = entityFromSearchQ.join(' ');
+
+	authorID = [];
+	for(l=0;l<keywFromSearchQ.length;l++) {
+		var kw = await dbo.collection("test_en").find({entity: entityFromSearchQ[l]}).toArray();
+		authorID = [...authorID, ...kw[0].fromAuthors];
+	}
+	authorID = [...(new Set(authorID))];
+	
+	authorFromID = [];
+	for(x=0;x<authorID.length;x++) {
+		authorFromID.push((await jload.getDataFromDocID(authorID[x])).authors.join(' '));
+	}
+
+	var listofauthors = {
+		authors: authorFromID,
+		id: authorID
+	};
+	let rt = new retrieval(K = 2, B = 0.75);
+	rt.index(listofauthors.authors);
+
+	searchResult = {
+		rankedResults: [],
+		rankedId: []
+	};
+	
+	searchResult.rankedResults = rt.search(searchQueryMod, 5);
+	for (l = 0; l < searchResult.rankedResults.length; l++) {
+		searchResult.rankedId.push(listofauthors.id[listofauthors.authors.indexOf(searchResult.rankedResults[l])]);
+	}
+
+	client.close()
+	return searchResult
+}
 
 //searchForTitle("This is literature for coronavirus and infection");
 // searchForAbstract("This is literature for coronavirus and infection");
@@ -161,6 +202,7 @@ module.exports = {
 	searchForTitle: searchForTitle,
 	searchForAbstract: searchForAbstract,
 	searchForText: searchForText,
+	searchForAuthor: searchForAuthor,
 	reloadDatabase: jload.reloadDatabase,
 	getDataFromDocID: jload.getDataFromDocID
 }
