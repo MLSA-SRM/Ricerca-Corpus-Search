@@ -33,6 +33,7 @@
                         <option value="title">Title</option>
                         <option value="abstract">Abstract</option>
                         <option value="text">Text</option>
+                        <option value="author">Author</option>
                     </select>
                 </div>
                 <input type="text" name="searchtext" class="search my-4 mx-1" value="<%= searchtext %>" placeholder="Search">
@@ -42,7 +43,19 @@
     </nav>
 
     <div class="container my-4">
-        
+        <% if ((d.resultDocs).length===0) { %>
+            <div class="content mx-lg-5 my-5 px-lg-5">
+                Your search - <%= searchtext %> - did not match any documents. <br> <br>
+
+                Suggestions: <br> <br>
+                <ul>
+                    <li>Make sure that all words are spelled correctly.</li>
+                    <li>Try different keywords.</li>
+                    <li>Try more general keywords.</li>
+                    <li>Try fewer keywords.</li>
+                </ul>
+            </div>
+            <%} else { %>
         <% d.resultDocs.forEach(function(i){ %>
         <div class="content mx-lg-5 my-5 px-lg-5">
             <div>
@@ -54,7 +67,7 @@
             <hr>
         </div>
         <% }) %>
-        
+        <% } %>
     </div>
 
 
