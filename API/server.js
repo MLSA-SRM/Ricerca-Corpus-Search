@@ -26,6 +26,7 @@ app.post('/search', function(req, res){
         searchEngine.searchForAbstract(searchQ).then((result) => {
         res.send(getDocs(result))
         });
+        });
     }
     if(req.body.selectby == "text") {
         searchEngine.searchForText(searchQ).then((result) => {
