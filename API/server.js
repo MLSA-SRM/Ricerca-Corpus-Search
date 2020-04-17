@@ -62,13 +62,13 @@ app.post('/search', function(req, res){
 
 async function getDocs(result) {
 	data = {
-		resultDocs: []
+        resultDocs: [],
     };
-    // console.log(result.rankedId);
 	for (let i=0;i<result.rankedId.length;i++) {
 		data.resultDocs.push((await searchEngine.getDataFromDocID(result.rankedId[i])));
     }
-    return data;
+    if (data.resultDocs.length > 0) return data;
+    else return {resultDocs: []};
 }
 
 app.get('/reloadDatabase', function(req, res){
