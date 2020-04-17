@@ -21,7 +21,7 @@
             ricerca
         </div>
 
-        <div class="container">
+        
             <form class="form-inline searchform my-4" action="search" method="POST" >
 
                 <div class="d-none d-lg-inline d-sm-none " style="vertical-align: middle;">
@@ -33,16 +33,29 @@
                         <option value="title">Title</option>
                         <option value="abstract">Abstract</option>
                         <option value="text">Text</option>
+                        <option value="author">Author</option>
                     </select>
                 </div>
                 <input type="text" name="searchtext" class="search my-4 mx-1" value="<%= searchtext %>" placeholder="Search">
                 <button type="submit" class="btn btn-primary mx-1 searchbtn">Search</button>
             </form>
-        </div>
+        
     </nav>
 
     <div class="container my-4">
-        
+        <% if ((d.resultDocs).length===0) { %>
+            <div class="content mx-lg-5 my-5 px-lg-5">
+                Your search - <%= searchtext %> - did not match any documents. <br> <br>
+
+                Suggestions: <br> <br>
+                <ul>
+                    <li>Make sure that all words are spelled correctly.</li>
+                    <li>Try different keywords.</li>
+                    <li>Try more general keywords.</li>
+                    <li>Try fewer keywords.</li>
+                </ul>
+            </div>
+            <%} else { %>
         <% d.resultDocs.forEach(function(i){ %>
         <div class="content mx-lg-5 my-5 px-lg-5">
             <div>
@@ -51,14 +64,11 @@
             <div class="discription">
                 <p class="abstract"><%= i.abstract %></p>
             </div>
+            <hr>
         </div>
         <% }) %>
-        
+        <% } %>
     </div>
-
-
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -69,6 +79,14 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="clamp.js"></script>
+    <script>
+        for ( i = 0; i < <%= d.resultDocs.length %> ; i++) {
+            header = document.getElementsByTagName('body')[0].getElementsByTagName('p')[i]
+            $clamp(header, {clamp: 3})
+            console.log("done")
+         }
     </script>
 </body>
 
