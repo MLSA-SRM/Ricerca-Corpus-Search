@@ -28,8 +28,8 @@ body{
 .search{
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 10px;
-
-    width:40%;
+    font-size: 1.2em;
+    width:61.5%;
     border:1px solid #aaa;
     border-radius:4px;
     margin:8px 0;
@@ -48,15 +48,16 @@ body{
   .input-group-append .btn, .input-group-prepend .btn {
     position: relative;
     z-index: 2;
-    height: 42px;
+    height: 46.8px;
 }
 
 .searchby{
     border:1px solid #aaa;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 4px;
-    height: 42px;
+    height: 46.8px;
     width: 10%;
+    font-size: 1.2em;
 }
 
 .searchby:focus{
@@ -64,12 +65,14 @@ body{
     box-shadow:0 0 8px 0 #5095C7;
 }
 .searchbtn{
-  height: 42px;
+  font-size: 1.2em;
+  height: 46.8px;
   background-color: #5095C7;
   border-color: #5095C7;
 }
 .searchbtn:hover{
-  height: 42px;
+  height: 46.8px;
+  font-size: 1.2em;
   background-color: #5095C7;
   border-color: #5095C7;
 }

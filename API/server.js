@@ -42,7 +42,22 @@ app.post('/search', function(req, res){
                 searchtext:searchQ,
             }))
         });
-    }
+    } else if(req.body.selectby == "all") {
+      result ={}
+      result["searchtext"] = searchQ
+      searchEngine.searchForTitle(searchQ).then((result) => {
+        getDocs(result).then((d) => searchEngine.searchForAbstract(searchQ).then((result) => {
+          getDocs(result).then((e) => searchEngine.searchForText(searchQ).then((result) => {
+            getDocs(result).then((f) => res.render('searchresultall.html',{d:d,e:e,f:f,searchtext:searchQ}) )
+          }) )
+        }))
+        });
+
+        
+
+        
+      
+  }
 })
 
 async function getDocs(result) {
