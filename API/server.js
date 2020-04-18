@@ -51,12 +51,6 @@ app.post('/search', function(req, res){
             getDocs(result).then((f) => res.render('searchresultall.html',{d:d,e:e,f:f,searchtext:searchQ}) )
           }) )
         }))
-        });
-
-        
-
-        
-      
   }
 })
 

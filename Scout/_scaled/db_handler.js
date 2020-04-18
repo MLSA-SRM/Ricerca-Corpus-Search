@@ -4,7 +4,7 @@ const path = require('path');
 const keyw = require('./keyword_extract.js');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017";
+var url = "mongodb+srv://ricera:scirank@cluster0-a9sai.azure.mongodb.net/test?retryWrites=true&w=majority";
 
 function readJSONFiles(callback) {
     fs.readdir(__dirname + '/test_json/', function (err, files) {
@@ -57,8 +57,8 @@ async function importJSONFiles (file_list) {
 
     // cleanup
     if (checkExists(cols, 'test_db') && checkExists(cols, 'test_en')) {
-        await dbo.collection('test_db').drop();
-        await dbo.collection('test_en').drop();
+        // await dbo.collection('test_db').drop();
+        // await dbo.collection('test_en').drop();
         
     } else {
         await dbo.createCollection('test_db')
