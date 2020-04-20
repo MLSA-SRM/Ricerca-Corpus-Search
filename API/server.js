@@ -52,11 +52,6 @@ app.post('/search', function(req, res){
           }) )
         }))
         });
-
-        
-
-        
-      
   }
 })
 
